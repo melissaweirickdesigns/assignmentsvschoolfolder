@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Symphony Natural Health | Refund and Return Calculator</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn.shopify.com/s/files/1/0247/9918/2930/files/SNH-1_24cf24d8-472f-42e6-8d47-9f05031f7c71_278x.png?v=1568062894">
+        <meta charset="UTF-8">
+        <meta name="description" content="Use this calculator when someone asks for a refund and/or to return a product. This will help us as a coporation to see what the actual cost is when we accept a return or refund">
+        <meta name="keywords" content="Refund, Return, Cost Analysis, Calculator">
+        <meta name="author" content="Melissa Weirick 02/12/2022 8013866272 melissaweirickdesigns@gmail.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="https://www.symphonynaturalhealth.com" title="Logo">
+            <img src="https://cdn.shopify.com/s/files/1/0247/9918/2930/files/SNH-1_24cf24d8-472f-42e6-8d47-9f05031f7c71_278x.png?v=1568062894" alt="symphonynaturalhealth.com"></a>
+        <h1 title="SubTitle" id="refunds">Refund and Return Calculator</h1>
+        <h5 title="whatisthisfor">Use this calculator when someone asks for a refund and/or to return a product. This will help us as a coporation to see what the actual cost is when we accept a return or refund</h5>
+    <hr>
+            <h6 title="mission">SYMPHONY NATURAL HEALTH is a conscious company that leads through our vision, our intentions and our actions, empowering people with the knowledge and solutions needed to achieve and maintain their best possible health.</h6>
+            <address title="missionsource">https://symphonynaturalhealth.com/pages/about-us#:~:text=Our%20Why%20or,best%20possible%20health.</address></p>
+            <!--This is where the calculator starts!-->
+            <form>
+                <label for="SKU" class="formtext">What is the SKU of the product?</label>
+                <br>
+                <select id="SKU" name="SKU">
+                    <option value="Default">Select SKU</option>
+                    <option value="7F-F90K-OGJZ">7F-F90K-OGJZ</option>
+                    <option value="BATH">BATH</option>
+                    <option value="BATH-4P-2">BATH-4P-2</option>
+                    <option value="COARSE">COARSE</option>
+                    <option value="COARSE-3P">COARSE-3P</option>
+                    <option value="FINE">FINE</option>
+                    <option value="FINE-3P-2">FINE-3P-2</option>
+                    <option value="FMH01-2">FMH01-2</option>
+                    <option value="FMH01-2P-3">FMH01-2P-3</option>
+                    <option value="FMH01-3P-2">FMH01-3P-2</option>
+                    <option value="FML01-2">FML01-2</option>
+                    <option value="FML02-2P-2">FML02-2P-2</option>
+                    <option value="FML02-3P-2">FML02-3P-2</option>
+                    <option value="FMP01-2">FMP01-2</option>
+                    <option value="FMP01-2P-2">FMP01-2P-2</option>
+                    <option value="FMP01-3P-2">FMP01-3P-2</option>
+                    <option value="HERB01">HERB01</option>
+                    <option value="HERB01-2P-2">HERB01-2P-2</option>
+                    <option value="HERB02">HERB02</option>
+                    <option value="HERB02-2">HERB02-2</option>
+                    <option value="HERB02-2P-2">HERB02-2P-2</option>
+                    <option value="HERB03-2P">HERB03-2P</option>
+                    <option value="INHALER-2">INHALER-2</option>
+                    <option value="QUIN01">QUIN01</option>
+                    <option value="QUIN01-2P-2">QUIN01-2P-2</option>
+                    <option value="QUIN01-3P-2">QUIN01-3P-2</option>
+                    <option value="RML01">RML01</option>
+                    <option value="RML01-2P-2">RML01-2P-2</option>
+                    <option value="RML01-3P-2">RML01-3P-2</option>
+                    <option value="STONE">STONE</option>
+                    <option value="STONES-3P">STONES-3P</option>
+                    <option value="ZBATH-DETOX-2">ZBATH-DETOX-2</option>
+                    <option value="ZBATH-MENO-2">ZBATH-MENO-2</option>
+                    <option value="ZBATH-PMS-2">ZBATH-PMS-2</option>
+                    <option value="ZBATH-REJUV-2">ZBATH-REJUV-2</option>
+                    <option value="ZBATH-RELAX-2">ZBATH-RELAX-2</option>
+                    <option value="ZHCS-SOLEJAR-2">ZHCS-SOLEJAR-2</option>
+                </select>
+                <br>
+                <label for="returnrefund" class="formtext">Is this a Refund or a Return/Refund?</label>
+                <br>
+                <br>
+                <input type="radio" id="refund" name="returnrefund" value="refund">
+                <label for="refund">Refund</label>
+                <input type="radio" id="return" name="returnrefund" value="return">
+                <label for="return">Return and Refund</label><br>
+                <p class="formtext">Was the product opened?</p>
+                <input type="radio" id="openedyes" name="openyn" value="yes">
+                <label for="openedyes">Yes</label>
+                <input type="radio" id="openedno" name="openyn" value="no">
+                <label for="openedno">No</label>
+                <br>
+                <p class="formtext">Does this product include blisters? (If yes, complete next two questions)</p>
+                <input type="radio" id="yesblisters" name="blistersorig" value="yes"?>
+                <label for="yesblisters">Yes</label>
+                <input type="radio" id="noblisters" name="blistersorig" value="no"?>
+                <label for="noblisters">No</label>
+                <br>
+                <br>
+                <label for="omblisters" class="formtext">How many blisters total are either opened or missing?</label>
+                <br>
+                <input type="number" id="omblisters" name="omblisters">
+                <br>
+                <br>
+                <label for="incblisters" class="formtext">How many blister cards are originally included in each box?</label>
+                <br>
+                <input type="number" id="incblisters" name="incblisters">
+                <br>            
+                <p class="formtext">Was the product damaged?</p>
+                <input type="radio" id="damagedyes" name="damagedyn" value="yes">
+                <label for="damagedyes">Yes</label>
+                <input type="radio" id="damagedno" name="damagedyn" value="no">
+                <label for="damagedno">No</label>
+                <br>
+                <br>
+                <label for="consumerprice" class="formtext">What is the MSRP of the product?</label>
+                <br>
+                <input type="number" id="consumerprice" name="consumerprice">
+                <br>
+                <br>
+                <label for="internalcost" class="formtext">What is the internal cost of the product?</label>
+                <br>
+                <input type="number" id="internalcost" name="internalcost">
+                <br>
+                <br>
+                <label for="qtyofsku" class="formtext">What is the QTY of the SKU?</label>
+                <br>
+                <input type="number" id="qtyofsku" name="qtyofsku">
+                <br>
+                <br>
+                <label for="origshipping" class="formtext">What was the original shipping cost?</label>
+                <br>
+                <input type="number" id="origshipping" name="origshipping">
+                <br>
+                <br>
+                <label for="replshipping" class="formtext">If reshipping, what is the new shipping cost?</label>
+                <br>
+                <input type="number" id="replshipping" name="replshipping">
+                <br>
+                <br>
+                <label for="replsku" class="formtext">If reshipping, what is the SKU being reshipped?</label>
+                <br>
+                <input type="text" id="replsku" name="replsku">
+                <br>
+                <br>
+                <label for="replskucost" class="formtext">If reshipping, what is the MSRP of the SKU being shipped?</label>
+                <br>
+                <input type="number" id="replskucost" name="replskucost">
+                <br>
+                <br>
+                <label for="returnlabel" class="formtext">If providing a return label, what is the cost of shipping?</label>
+                <br>
+                <input type="number" id="returnlabel" name="returnlabel">
+                <br>
+                <br>
+            </form>
+            <div class="bcontainer">
+            <button type="button" id="newButton">ANALYZE</button>
+            </div>
+            <script src="app.js"></script>
+    </body>
+</html>
