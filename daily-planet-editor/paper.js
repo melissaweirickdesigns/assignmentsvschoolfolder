@@ -15,7 +15,6 @@ function whoWins(isThereKryptonite,enemiesName) {
     if (!isThereKryptonite) {
         return "Superman beats " + enemiesName + ", of course";
     }
-
     else {
         return "Depends on how quick Superman can get rid of the Kryptonite. "+ enemiesName +" could possibly win this one.";
     }
@@ -23,14 +22,13 @@ function whoWins(isThereKryptonite,enemiesName) {
 
 for (let i = 0; i < enemiesName.length; i++ ) {
     let isThereKryptonite;
-
         if (i % 2 === 0) {
             isThereKryptonite = true;
         } 
         else {
             isThereKryptonite = false;
         }
-            console.log( whoWins(isThereKryptonite, enemiesName [i] ) );
+        console.log( whoWins(isThereKryptonite, enemiesName [i] ) );
 }
 
 function howAttractedIsLoisLaneToMe () {
@@ -49,6 +47,6 @@ while (clarkKent) {
             if (phoneBoothQuickChange >= 0.5 ) {
                 clarkKent = false;
                 superman = true;
-                    console.log("Now I'm Superman!");
+                console.log("Now I'm Superman!");
             }
 };
