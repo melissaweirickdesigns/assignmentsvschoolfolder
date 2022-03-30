@@ -28,7 +28,7 @@ for (let i = 0; i < enemiesName.length; i++ ) {
         else {
             isThereKryptonite = false;
         }
-        console.log( whoWins(isThereKryptonite, enemiesName [i] ) );
+        console.log(whoWins(isThereKryptonite, enemiesName[i]));
 }
 
 function howAttractedIsLoisLaneToMe () {
