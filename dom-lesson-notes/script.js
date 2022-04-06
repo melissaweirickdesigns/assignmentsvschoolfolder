@@ -79,13 +79,13 @@ console.log(Object.keys(dJSquaresOne.style))
 dJSquaresOne.style.backgroundColor = "purple"
 //changes the background color of purple
 
-document.body.style.backgroundColor = "orange"
+document.body.style.backgroundColor = "aqua"
 //used the body element to change the entire background orange but left the puple style
 
 //className
 
-var sensitiveInfo = document.querySelector("#profileInformation").className
-console.log(sensitiveInfo)
+var querySelector = document.getElementById("profileInformation").className
+console.log(querySelector)
 //returns blank? If it is redacted, will it show the class name?
 
 var headerClassStyle = document.getElementById("header").className
@@ -124,5 +124,61 @@ textInputOne.value = "Hello, My Name is Melissa"
 console.log(textInputOne.value)
 //also shows as the new text in the dev console
 
+var querySelector = document.getElementById("profileInformation")
+console.log(querySelector)
+//troubleshooting why redacted classname will not show
 
+var newLI = document.createElement("li")
+var dJSquaresTwo = document.getElementById("dJSquares")
+dJSquaresTwo.append(newLI)
+//this changed the HTML front end to add an additional list point
 
+newLI.textContent = "Header Five"
+//added text to the new element added through js
+
+//ol is ordered list {1. , 2., 3., }. ul is unordered list {bullet point}
+
+var newLi2 = document.createElement("li")
+var dJSquaresTwo = document.getElementById("dJSquares")
+dJSquaresTwo.prepend(newLi2)
+// this added the new list item to the ol as number 1
+
+newLi2.textContent = "Header Zero"
+//This added text to ol number 1
+
+var newParagraph = document.createElement("p")
+newParagraph.textContent = "This is a test paragraph"
+document.body.append(newParagraph)
+//add the paragraph this is a test paragraph to the bottom of the body
+
+newParagraph.style.textAlign = "center"
+newParagraph.style.fontSize = "72px"
+//this change the new paragraph to be centered and enlarged the size of the font
+
+var dJSquaresThree = document.getElementById("dJSquares")
+dJSquaresThree.innerHTML += "<li>Header Six</li>"
+//this added list item number 7 on the front end of the HTML page
+
+document.body.innerHTML += "<p id='innerHTMLParagraph'>I added and innerHTML paragraph using JavaScript</p>"
+//this takes the whole body element and adds a parragraph at the bottom on the front end of HTML
+
+document.getElementById('innerHTMLParagraph').style.color = "orange"
+//this changes the color of the text to orange
+
+//Task Questions
+
+//1. Search google to learn a little more about the difference between the '.append()' method and the '.appendChild()' method
+
+//appendChild() appends an element as the last child of an element
+//append() appends an element to the end of the list
+
+//2. What do you see as pros/cons of using '.createElement()' and 'append()' vs 'innerHTML'?
+
+//3. What happens if I create an element using 'createElement()' but don't use '.append()'?
+
+//4. how might you use a for loop in conjunction with the DOM methods for create elements?
+
+//https://www.youtube.com/watch?v=e0ihEHxd6vI&ab_channel=dcode
+
+//Place Holder - answer the questions above and then continue with 
+//Creating Elemens in JS: For loops & createElement
