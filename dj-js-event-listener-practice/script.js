@@ -65,4 +65,64 @@ document.querySelector("#paragraphTwo").textContent = headerTwoPractice;
 
 //textContent practice - listing two different methods above.
 
-//Place Left Off Modifying an Elements Text
+var dJSquaresOne = document.getElementById("dJSquares")
+console.log(dJSquaresOne.style)
+//This shows as CSSStyleDeclaration in console. Lists all of the possible CSS styles
+
+console.log(typeof dJSquaresOne.style)
+//This shows as object only
+
+console.log(Object.keys(dJSquaresOne.style))
+//This shows as an array of 579 css styles all clumpped together.
+//I like the console.log(dJSquaresOne.style) option the best
+
+dJSquaresOne.style.backgroundColor = "purple"
+//changes the background color of purple
+
+document.body.style.backgroundColor = "orange"
+//used the body element to change the entire background orange but left the puple style
+
+//className
+
+var sensitiveInfo = document.querySelector("#profileInformation").className
+console.log(sensitiveInfo)
+//returns blank? If it is redacted, will it show the class name?
+
+var headerClassStyle = document.getElementById("header").className
+console.log(headerClassStyle)
+//returns headerOne. This returns the name of the class.
+
+//document.querySelector("#header").className += " headerNewClass"
+//classList
+
+document.querySelector("#header").classList.add("headerNewClass")
+console.log(document.querySelector("#header").className)
+//returns headerOne headerNewClass. added a new class through js and not on the style sheet
+
+document.querySelector("#header").classList.remove("headerOne")
+console.log(document.querySelector("#header").className)
+//returns headerNewClass removed the HeaderOne class through js and not through css. this did not error out the previous runs
+
+document.querySelector("#header").classList.toggle("headerOne")
+console.log(document.querySelector("#header").className)
+document.querySelector("#header").classList.toggle("headerOne")
+console.log(document.querySelector("#header").className)
+document.querySelector("#header").classList.toggle("headerOne")
+console.log(document.querySelector("#header").className)
+//adds and removed headerOne to and from the class list.
+
+var querySelector = document.querySelector("#profileInformation").className
+console.log(querySelector)
+//changing the variable name to querySelector still returned blank on the dev console
+
+var textInputOne = document.getElementById("textInput")
+console.log(textInputOne.value)
+// returns search which is what the value is in the html document
+
+textInputOne.value = "Hello, My Name is Melissa"
+//changed the value of the text box to show in the HTML front end, not the text
+console.log(textInputOne.value)
+//also shows as the new text in the dev console
+
+
+
