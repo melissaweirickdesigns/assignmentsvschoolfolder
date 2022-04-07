@@ -1,52 +1,52 @@
 let square = document.getElementsByClassName("square")
 console.log(square[0])
 
-for (var i = 0; i < square.length; i++) {
+for (let i = 0; i < square.length; i++) {
     console.log(square[i].innerText)
 }
 
-let test = document.getElementsByClassName("noName")
+const test = document.getElementsByClassName("noName")
 console.log(test)
 
 // 1. Difference between getElementByClassName and getElementsByClassName is that getElementByClassName will select 1 unqiue id and getElementsByClassName will gather the whole HTML collection with the matching class ID.
 // 2. returns HTMLCollection [] - length 0 (an empty array)
 
-let testTwo = document.getElementById("noNameTwo")
+const testTwo = document.getElementById("noNameTwo")
 console.log(testTwo)
 
 // 3. returns null
 
 // querySelector selects single element on the page - if multiple same element, it will select first
 
-var selectQuerySelectorTest = document.querySelector("#dJSquares")
-console.log(selectQuerySelectorTest)
+const selectQuerySelectorTestOne = document.querySelector("#dJSquares")
+console.log(selectQuerySelectorTestOne)
 //returns <ol id="dJSquares">..</ol>> - entire ol (ordered list). for .querySelector to pull the full <ol>, use "#{ol name}"" 
 
 // querySelecttorAll selects all elements from the page that match
 
-var selectQuerySelectorTest = document.querySelectorAll("#dJSquares")
-console.log(selectQuerySelectorTest)
+const selectQuerySelectorTestTwo = document.querySelectorAll("#dJSquares")
+console.log(selectQuerySelectorTestTwo)
 //returns NodeList [ol#dJSquares]. NodeList is the essentially the same thing as HTMLCollection
 
 // (#) is used for IDs, (.) is used for class
 
-var selectQuerySelectorTest = document.querySelectorAll("#dJSquares")
-console.log(selectQuerySelectorTest.length)
+const selectQuerySelectorTestThree = document.querySelectorAll("#dJSquares")
+console.log(selectQuerySelectorTestThree.length)
 //returns the qty of elements with that ID specifically
 
 //var selectQuerySelectorTest = document.querySelector("ol#dJSquares > li")
 //console.log(selectQuerySelectorTest)
 //retuns li.square (the first item in the array)
 
-var result = document.querySelectorAll("ol#dJSquares > li")
-console.log(result)
+const resultOne = document.querySelectorAll("ol#dJSquares > li")
+console.log(resultOne)
 //returns NodeList(4) [li.square, li.square, li.square, li.square]. The full Array (ol)
 
-var result = document.querySelectorAll("li.sensitiveInformation")
+const result = document.querySelectorAll("li.sensitiveInformation")
 console.log(Array.from(result))
 //returns (3) [li.sensitiveInformation, li.sensitiveInformation, li.sensitiveInformation,] 
 
-for (var i = 0; i<result.length; i++) {
+for (let i = 0; i<result.length; i++) {
     result[i].textContent = "----Private Information----"
 }
 // .textContent element changes text in HTML document via javascript. In this case it shows as redacted.
@@ -57,15 +57,15 @@ for (var i = 0; i<result.length; i++) {
 //Statement 3 increases a value (i++) each time the code block in the loop has been executed.
 //best way to change text using JavaScript is using textContent, not innerHTML (security risk) and not innerText (expensive)
 
-let headerOne = document.getElementById("header").textContent;
+const headerOne = document.getElementById("header").textContent;
 document.getElementById("paragraph").textContent = headerOne;
 
-let headerTwoPractice = document.querySelector("#headerTwo").textContent;
+const headerTwoPractice = document.querySelector("#headerTwo").textContent;
 document.querySelector("#paragraphTwo").textContent = headerTwoPractice;
 
 //textContent practice - listing two different methods above.
 
-var dJSquaresOne = document.getElementById("dJSquares")
+const dJSquaresOne = document.getElementById("dJSquares")
 console.log(dJSquaresOne.style)
 //This shows as CSSStyleDeclaration in console. Lists all of the possible CSS styles
 
@@ -84,11 +84,11 @@ document.body.style.backgroundColor = "aqua"
 
 //className
 
-var querySelector = document.getElementById("profileInformation").className
+const querySelector = document.getElementById("profileInformation").className
 console.log(querySelector)
 //returns blank? If it is redacted, will it show the class name?
 
-var headerClassStyle = document.getElementById("header").className
+const headerClassStyle = document.getElementById("header").className
 console.log(headerClassStyle)
 //returns headerOne. This returns the name of the class.
 
@@ -111,11 +111,7 @@ document.querySelector("#header").classList.toggle("headerOne")
 console.log(document.querySelector("#header").className)
 //adds and removed headerOne to and from the class list.
 
-var querySelector = document.querySelector("#profileInformation").className
-console.log(querySelector)
-//changing the variable name to querySelector still returned blank on the dev console
-
-var textInputOne = document.getElementById("textInput")
+const textInputOne = document.getElementById("textInput")
 console.log(textInputOne.value)
 // returns search which is what the value is in the html document
 
@@ -124,12 +120,12 @@ textInputOne.value = "Hello, My Name is Melissa"
 console.log(textInputOne.value)
 //also shows as the new text in the dev console
 
-var querySelector = document.getElementById("profileInformation")
-console.log(querySelector)
+const querySelectorOne = document.querySelector("#profileInformation").className
+console.log(querySelectorOne)
 //troubleshooting why redacted classname will not show
 
-var newLI = document.createElement("li")
-var dJSquaresTwo = document.getElementById("dJSquares")
+const newLI = document.createElement("li")
+const dJSquaresTwo = document.getElementById("dJSquares")
 dJSquaresTwo.append(newLI)
 //this changed the HTML front end to add an additional list point
 
@@ -138,15 +134,15 @@ newLI.textContent = "Header Five"
 
 //ol is ordered list {1. , 2., 3., }. ul is unordered list {bullet point}
 
-var newLi2 = document.createElement("li")
-var dJSquaresTwo = document.getElementById("dJSquares")
+const newLi2 = document.createElement("li")
+const dJSquaresFour = document.getElementById("dJSquares")
 dJSquaresTwo.prepend(newLi2)
 // this added the new list item to the ol as number 1
 
 newLi2.textContent = "Header Zero"
 //This added text to ol number 1
 
-var newParagraph = document.createElement("p")
+const newParagraph = document.createElement("p")
 newParagraph.textContent = "This is a test paragraph"
 document.body.append(newParagraph)
 //add the paragraph this is a test paragraph to the bottom of the body
@@ -155,7 +151,7 @@ newParagraph.style.textAlign = "center"
 newParagraph.style.fontSize = "72px"
 //this change the new paragraph to be centered and enlarged the size of the font
 
-var dJSquaresThree = document.getElementById("dJSquares")
+const dJSquaresThree = document.getElementById("dJSquares")
 dJSquaresThree.innerHTML += "<li>Header Six</li>"
 //this added list item number 7 on the front end of the HTML page
 
@@ -169,16 +165,48 @@ document.getElementById('innerHTMLParagraph').style.color = "orange"
 
 //1. Search google to learn a little more about the difference between the '.append()' method and the '.appendChild()' method
 
+//append() not support on all platforms (IE)
+//append() has shorter code writing
 //appendChild() appends an element as the last child of an element
 //append() appends an element to the end of the list
+//append() has an advantage as it is more flexible, you can add more than one element at a time and you can add text as a string
+// example below of append
+const p = document.querySelector('p')
+p.append('. This is an appended text');
 
+//vs appendChild()
+
+const pOne = document.querySelector('h1')
+const newParagraphOne = document.createElement('p')
+newParagraphOne.textContent = "appendChild() paragraph"
+
+pOne.appendChild(newParagraphOne);
+
+
+//helpful videos for additional append/prepend options:
+        // 1. https://www.youtube.com/watch?v=b94jaGyAzFA&ab_channel=StudyAtHome
+        // 2. https://www.youtube.com/watch?v=umHdBuTw98c&ab_channel=AngelaDelise   
 //2. What do you see as pros/cons of using '.createElement()' and 'append()' vs 'innerHTML'?
+
+// keeps existing code/nodes to reference, however updates it through Javascript. using innerHTML, you would have to rewrite all DOM
 
 //3. What happens if I create an element using 'createElement()' but don't use '.append()'?
 
+const pTwo = document.querySelector('h1')
+const newParagraphTwo = document.createElement('p')
+//not using append or append child after you create an element saves the element on the backend but will not add it to the front end.
+
 //4. how might you use a for loop in conjunction with the DOM methods for create elements?
 
-//https://www.youtube.com/watch?v=e0ihEHxd6vI&ab_channel=dcode
+// 1. https://www.youtube.com/watch?v=e0ihEHxd6vI&ab_channel=dcode
 
-//Place Holder - answer the questions above and then continue with 
-//Creating Elemens in JS: For loops & createElement
+const address = document.getElementById("profileInformation");
+const addressComponents = ["Street Address: 1235 Alphabet St", "City: Sesame Street", "State: CA", "Zipcode: 90210"];
+
+for (let addComp of addressComponents) {
+    let newAddComp = document.createElement('li');
+    newAddComp.textContent = addComp;
+    address.appendChild(newAddComp);
+}
+
+//Creating Elements in JS: For loops & createElement
