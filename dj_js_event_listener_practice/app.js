@@ -25,3 +25,21 @@ function greenSquare() {
 function orangeSquare() {
     djSquare.style.backgroundColor = 'orange'
 };
+
+document.addEventListener('keypress', function (event) {
+    if (event.key === 'b') {
+        djSquare.style.backgroundColor = 'blue';
+    }
+    if (event.key === 'r') {
+        djSquare.style.backgroundColor = 'red';
+    }
+    if (event.key === 'y') {
+        djSquare.style.backgroundColor = 'yellow';
+    }
+    if (event.key === 'g') {
+        djSquare.style.backgroundColor = 'green';
+    }
+    if (event.key === 'o') {
+        djSquare.style.backgroundColor = 'orange';
+    }
+});
