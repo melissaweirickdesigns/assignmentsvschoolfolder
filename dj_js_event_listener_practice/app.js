@@ -1,5 +1,4 @@
 let djSquare = document.getElementById("square");
-let djKeyEvent = Event.key;
 
 djSquare.addEventListener("mouseover", blueSquare);
 djSquare.addEventListener("mousedown", redSquare);
