@@ -1,12 +1,14 @@
 let djSquare = document.getElementById("square");
+let djKeyEvent = Event.key;
+
 djSquare.addEventListener("mouseover", blueSquare);
 djSquare.addEventListener("mousedown", redSquare);
 djSquare.addEventListener("mouseup", yellowSquare);
 djSquare.addEventListener("dblclick", greenSquare);
-window.addEventListener("scroll", orangeSquare);
+window.addEventListener("wheel", orangeSquare);
 
 function blueSquare() {
-    document.append(djSquare.style.backgroundColor = 'blue')
+    document.append(djSquare.style.backgroundColor = 'blue');
 };
 
 function redSquare() {
@@ -22,5 +24,5 @@ function greenSquare() {
 };
 
 function orangeSquare() {
-    document.djSquare.append(djSquare.style.backgroundColor = 'orange')
+    document.append(djSquare.style.backgroundColor = 'orange')
 };
