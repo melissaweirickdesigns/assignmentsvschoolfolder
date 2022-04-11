@@ -4,6 +4,7 @@ djSquare.addEventListener("mouseover", blueSquare);
 djSquare.addEventListener("mousedown", redSquare);
 djSquare.addEventListener("mouseup", yellowSquare);
 djSquare.addEventListener("dblclick", greenSquare);
+djSquare.addEventListener("mouseout", blackSquare);
 window.addEventListener("wheel", orangeSquare);
 
 function blueSquare() {
@@ -20,6 +21,10 @@ function yellowSquare() {
 
 function greenSquare() {
     djSquare.style.backgroundColor = 'green'
+};
+
+function blackSquare() {
+    djSquare.style.backgroundColor = 'black'
 };
 
 function orangeSquare() {
@@ -41,5 +46,8 @@ document.addEventListener('keypress', function (event) {
     }
     if (event.key === 'o') {
         djSquare.style.backgroundColor = 'orange';
+    }
+    if (event.key === 's') {
+        djSquare.style.backgroundColor = 'black';
     }
 });
