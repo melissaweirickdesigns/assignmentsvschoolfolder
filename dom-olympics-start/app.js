@@ -16,14 +16,45 @@ subTitleAuthor.textContent = 'Melissa Weirick ';
 subTitle.prepend(subTitleAuthor);
 subTitle.style.fontWeight = 'bolder';
 
-const messagesID = document.getElementsByClassName("#messages");
-messagesID.attr("id", "messagesID");
-console.log(document.getElementById("messages").id);
+const messages = document.querySelector('.messages');
+messages.setAttribute('id', 'messages');
 
+const clearAllMessages = document.getElementById("clear-button");
+clearAllMessages.addEventListener("click", clearMessages);
 
+function clearMessages(){
+    document.getElementById("messages").innerHTML = "";
+};
 
+const message = document.getElementsByClassName("message");
 
+message[0].textContent = "HELP! I have been involved in a Robbery!";
+message[1].textContent = "I think you have the wrong number, call 911!";
+message[2].textContent = "No! I need to find shelter from the police";
+message[3].textContent = "This is Batman...";
 
+let dropDown = document.getElementById("theme-drop-down");
 
+function changeTheme() {
+    let selectedOption = dropDown.value;
+    let rightMessage = document.styleSheets[0].cssRules[5].style;
+    let leftMessage = document.styleSheets[0].cssRules[6].style;
+    if ( selectedOption === "theme-one"){
+        rightMessage.backgroundColor = "#b35900";
+        leftMessage.backgroundColor = "#99ebff";
+    }if ( selectedOption === "theme-two"){
+        rightMessage.backgroundColor = "#808080"; 
+        leftMessage.backgroundColor = "#e62e00";
+    }if ( selectedOption === "theme-three"){
+        rightMessage.backgroundColor = "#00cc00";
+        leftMessage.backgroundColor = "#ffad33";
+    }if ( selectedOption === "theme-four"){
+        rightMessage.backgroundColor = "#ffff1a";
+        leftMessage.backgroundColor = "#a64dff";
+    };
+};
 
+dropDown.addEventListener("change", changeTheme);
+
+let sendButton = document.get
 
