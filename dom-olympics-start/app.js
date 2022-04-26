@@ -56,5 +56,26 @@ function changeTheme() {
 
 dropDown.addEventListener("change", changeTheme);
 
-let sendButton = document.get
+let sendMessage = document.getElementById("sendButton");
+let newMessage = document.getElementById("input");
+let toggleDiv = "right";
 
+
+function addMessage() {
+    event.preventDefault();
+    let newThread = document.createElement('div');
+    newThread.classList.add('message');
+    if (toggleDiv === "right") {
+        newThread.classList.add('left');
+        toggleDiv = "left";
+    }else{
+        newThread.classList.add('right');
+        toggleDiv = "right";
+    };
+    newThread.textContent = newMessage.value;
+    let addMessageDiv = document.getElementById("messages");
+    addMessageDiv.appendChild(newThread);
+    newMessage.value = "";
+};
+
+sendMessage.addEventListener("click", addMessage);
