@@ -1,3 +1,4 @@
+const groceryListItems = [];
 const form = document["addItem"];
 
 const addItems = form.addEventListener("submit", event => {
@@ -9,7 +10,11 @@ const addItems = form.addEventListener("submit", event => {
     itemName.setAttribute("id", "itemNameDiv");
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
-    editButton.setAttribute("id", "edit");
+    editButton.setAttribute("id", "editButton");
+    const saveButton = document.createElement("button");
+    saveButton.textContent = "Save";
+    saveButton.setAttribute("id", "Save");
+    saveButton.style.display = "none";
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "X";
     deleteButton.setAttribute("id", "delete");
@@ -17,38 +22,35 @@ const addItems = form.addEventListener("submit", event => {
     groceryList.appendChild(newItem);
     newItem.appendChild(itemName);
     newItem.appendChild(editButton);
+    newItem.appendChild(saveButton);
     newItem.appendChild(deleteButton);
+    groceryListItems.push(itemName.textContent);
     const groceryItem = document.getElementById("list");
-    const myJSON = JSON.stringify(groceryItem);
+    const myJSON = JSON.stringify(groceryListItems);
     localStorage.setItem("NewGroceryItem", myJSON);
     itemValue.value = "";
     deleteButton.addEventListener("click", event => {
         event.target.parentNode.remove();
         localStorage.removeItem(event.target.parentNode);
     });
-    
+
     function editButtonEvent(event) {
         console.log(localStorage);
-        const editField = document.createElement("input");
+        saveButton.style.display = "block";
+        let editField = document.createElement("input");
         editField.setAttribute("id", "inputFieldID")
         editField.value = event.target.parentNode.childNodes[0].textContent;
         event.target.parentNode.appendChild(editField);
-        event.target.textContent = "save";
-        event.target.setAttribute("id", "saveButton");
-        const saveButton = event.target;
-        function saveButtonEvent(event) {
-            const NewItemName = event.target.parentNode.childNodes[0];
-            const removeInputField = event.target.parentNode.childNodes[3];
-            const removeInputFieldTwo = event.target.parentNode.childNodes[4];
-            NewItemName.textContent = editField.value;
-            event.target.parentNode.removeChild(removeInputField);
-            event.target.parentNode.removeChild(removeInputFieldTwo);
-            event.target.textContent = "Edit";
-            event.target.setAttribute("id", "editButton");   
-        };
-        saveButton.addEventListener("click", saveButtonEvent);  
+        saveButton.addEventListener("click", (event) => saveButtonEvent(event, editField));
+        editButton.style.display = "none";    
     };
-    
+    function saveButtonEvent(event, editField) {
+        console.log(event.target);
+        editField.style.display = "none";
+        const NewItemName = event.target.parentNode.childNodes[0];
+        NewItemName.textContent = editField.value;
+        editButton.style.display = "block";
+        saveButton.style.display = "none";
+    };
     editButton.addEventListener("click", editButtonEvent); 
-    
-});
+    });
