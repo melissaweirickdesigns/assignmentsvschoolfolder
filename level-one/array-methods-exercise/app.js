@@ -38,5 +38,4 @@ food.reverse();
 console.log(food);
 //10. Turn the array into a string and return it.
 console.log(food.join(", "));
-//If you've done everything correctly, the last step should print the following string to the console:
 
