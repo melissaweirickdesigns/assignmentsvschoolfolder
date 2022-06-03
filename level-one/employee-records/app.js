@@ -11,7 +11,7 @@ function Employees(name, jobTitle, salary, status = "Full Time") {
 };
 
 Employees.prototype.printEmployeeForm = function() {
-    console.log("Name: " + this.name + ", " + "Job Title: " + this.jobTitle + ", " + "Salary: " + this.Salary + ", " + "Status: " + this.status);
+    console.log("Name: " + this.name + ", " + "Job Title: " + this.jobTitle + ", " + "Salary: " + this.salary + ", " + "Status: " + this.status);
 };
 
 var melissa = new Employees("Melissa", "Assistant Operations Manager", 60000, "Part Time");
