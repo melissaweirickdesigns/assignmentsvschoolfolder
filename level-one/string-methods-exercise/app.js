@@ -53,7 +53,6 @@ function capitalize(text) {
     };
     let combinedUpperCase = upperCaseSplitText.join(" ");
     console.log(combinedUpperCase);
-
 };
 
 capitalize("hey friends! practice practice practice!");
