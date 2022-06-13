@@ -1,0 +1,79 @@
+.gridContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "fourSquareOne fourSquareTwo fourSquareThree fourSquareFour" 
+    "twoSquareOne twoSquareOne twoSquareTwo twoSquareTwo"
+    "abstractSquaresOne abstractSquaresOne abstractSquaresOne abstractSquaresTwo";
+    grid-gap: .2rem;
+    
+}
+
+nav {
+    background-color: #f5C6D6;
+    grid-area: nav;
+}
+
+.fourSquare {
+    background-color: #EE2E84;
+}
+
+#fourSquareOne {
+    grid-area: fourSquareOne;
+}
+
+#fourSquareTwo {
+    grid-area: fourSquareTwo;
+}
+
+#fourSquareThree {
+    grid-area: fourSquareThree;
+}
+
+#fourSquareFour {
+    grid-area: fourSquareFour;
+}
+
+.twoSquare {
+    background-color: #85CFD8;
+}
+
+#twoSquareOne {
+    grid-area: twoSquareOne;
+}
+
+#twoSquareTwo {
+    grid-area: twoSquareTwo;
+}
+
+#abstractSquaresOne {
+    background-color: #8DC63F;
+    grid-area: abstractSquaresOne;
+}
+
+#abstractSquaresTwo {
+    background-color: #E76E34;
+    grid-area: abstractSquaresTwo;
+}
+
+@media only screen and (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "fourSquareOne"
+        "fourSquareTwo"
+        "fourSquareThree"
+        "fourSquareFour"
+        "twoSquareOne"
+        "twoSquareTwo"
+        "abstractSquaresOne"
+        "abstractSquaresTwo";        ;
+    }
+
+    
+}
