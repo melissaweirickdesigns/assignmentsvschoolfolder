@@ -53,14 +53,6 @@ p {
     background-color: #fff;
 }
 
- {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
 @media only screen and (max-width: 540px) {
     body {
         background-size: 75%;
