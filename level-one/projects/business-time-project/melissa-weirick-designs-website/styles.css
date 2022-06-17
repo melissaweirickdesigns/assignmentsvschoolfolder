@@ -1,7 +1,8 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
@@ -9,156 +10,59 @@ body {
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
-}
-.gridContainer {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: .4fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: .7fr 2fr 1fr .8fr;
-    grid-template-areas: 
-        "categoryList nav nav nav nav"
-        "categoryList main main main main"
-        "categoryList itemOne itemTwo itemThree itemFour"
-        "categoryList footer footer footer footer";
-    grid-gap: 0.2rem;
-    overflow: hidden;
+    background-image: url("pexels-thisisengineering-3861969.jpg");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 
-nav {
-    grid-area: nav;
-    font-size: 3em;
-    display: flex;
-    justify-content: center;
-    font-family: 'Indie Flower', cursive;
-    background-color: rgb(238, 237, 237);
-    padding-top: 25px;
-}
-
-main {
-    background-image: url('pexels-lukas-1420709.jpg');
-    background-size: cover;
-    grid-area: main;
-    overflow: hidden;
-}
-
-#categoryList {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 90%;
-    height: 100vh;
-    background-color: #050505;
-    color: rgb(255, 254, 254);
-    grid-area: categoryList;
-    padding-top: 2%;
-}
-
-.sidebar .logoContent i {
-    position: absolute;
-    left: 90%;
-    top: 6px;
-    font-size: 20px;
-    height: 50px;
-    width: 50px;
+h1 {
     text-align: center;
-    line-height: 50px;
-    transform: translateX(-50%);
 }
 
-.sidebar ul {
-    margin-top: 20px;
-}
-
-.sidebar ul li {
-    
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin: 0 5px;
-    list-style: none;
-    line-height: 50px;
-}
-
-.sidebar ul li:hover {
-    background: #fff;
-}
-
-.sidebar ul li a {
-    color: #fff;
-    display: flex;
+p {
     text-align: center;
+}
+
+.mainMenuList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.mainMenuList li {
+    float: left;
+}
+
+.mainMenuList li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-
 }
 
-.sidebar ul li a:hover {
-    color: #11101d; 
-    border-right-style: solid;
-    border-right-color: rgb(53, 110, 53);
-    border-right-width: 5px;
-    padding-left: 5px;
+.mainMenuList li a:hover {
+    color: #11101d;
+    background-color: #fff;
+}
+.mainMenuList li a i:hover {
+    color: #11101d;
+    background-color: #fff;
 }
 
-.sidebar ul li a i {
-    height: 50px;
-    min-width: 50px;
-    border-radius: 12px;
-    line-height: 50px;
+ {
+    display: block;
+    color: white;
     text-align: center;
-    padding-left: 15px;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-#itemOne {
-    background-color: #44e1f2;
-    grid-area: itemOne;
-}
-
-#itemTwo {
-    background-color: #36b4c2;
-    grid-area: itemTwo;
-}
-
-#itemThree {
-    background-color: #268b96;
-    grid-area: itemThree;
-}
-
-#itemFour {
-    background-color: #155e66;
-    grid-area: itemFour;
-}
-footer {
-    background-color: #367d85;
-    grid-area: footer;
-    overflow: hidden;
-    text-align: center;
-    padding: 50px 50px 50px 50px;
-}
-
-footer p {
-    
-}
-
-@media only screen and (max-width: 1280px) {
-    .gridContainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: .6fr .7fr 1.5fr 1.2fr 1.2fr .8fr;
-        grid-template-areas: 
-            "nav"
-            "categoryList"
-            "main"
-            "itemOne"
-            "itemTwo"
-            "itemThree"
-            "footer";
+@media only screen and (max-width: 540px) {
+    body {
+        background-size: 75%;
     }
-    nav {
-        font-size: 1em;
-        margin-top: 3vh;
-    }
-
-    .sidebar {
-        display: none;
-    }
-
-};
+}
