@@ -58,4 +58,17 @@ p {
     body {
         background-size: 75%;
     }
+
+    .mainMenuList li {
+        float: none;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: small;
+    }
+
+    p {
+        font-size: small;
+    }
 }

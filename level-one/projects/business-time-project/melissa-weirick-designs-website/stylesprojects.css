@@ -12,17 +12,28 @@ body {
     overflow: hidden;
 }
 
-#levelOne {
-    width: 20%;
-    margin: 5%;
+#levelOneContainer {
+    margin: 2%;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "one two three four"
+    "five six seven eight"
+    "nine ten eleven twelve"
+    "thirteen fourteen fifteen sixteen";
+    grid-gap: 0.5rem;
 }
 
-#levelOne img{
-    width: 100%;
+#one img{
+    margin: 10% 10% 2% 10%;
+    width: 75%;
     align-items: center;
+    grid-area: one;
 }
 
-#levelOne a h3 {
+#one a h3 {
     text-align: center;
     font-size: small;
 }
@@ -57,7 +68,31 @@ body {
 }
 
 @media only screen and (max-width: 540px) {
-    body {
-        background-size: 75%;
+    
+    .mainMenuList li {
+        float: none;
+        width: 100%;
+    }
+
+    #levelOneContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight"
+        "nine"
+        "ten"
+        "eleven"
+        "twelve"
+        "thirteen"
+        "fourteen"
+        "fifteen"
+        "sixteen";
     }
 }

@@ -47,7 +47,10 @@ body {
 }
 
 @media only screen and (max-width: 540px) {
-    body {
-        background-size: 75%;
+    
+    .mainMenuList li {
+        float: none;
+        width: 100%;
     }
+
 }

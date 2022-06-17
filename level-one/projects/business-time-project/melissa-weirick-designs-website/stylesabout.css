@@ -45,3 +45,11 @@ body {
     background-color: #fff;
 }
 
+@media only screen and (max-width: 540px) {
+    
+    .mainMenuList li {
+        float: none;
+        width: 100%;
+    }
+
+}
