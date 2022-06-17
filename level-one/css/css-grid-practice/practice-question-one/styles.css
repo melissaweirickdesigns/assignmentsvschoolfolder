@@ -1,0 +1,36 @@
+#gridContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "one one two two"
+    "three four four four"
+    "five five five five";
+    grid-gap: 0.2rem;
+}
+
+#one {
+    background-color: red;
+    grid-area: one;
+}
+
+#two {
+    background-color: blue;
+    grid-area: two;
+}
+
+#three {
+    background-color: green;
+    grid-area: three;
+}
+
+#four {
+    background-color: purple;
+    grid-area: four;
+}
+
+#five {
+    background-color: yellow;
+    grid-area: five;
+}
