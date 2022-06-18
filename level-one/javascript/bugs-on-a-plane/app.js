@@ -2,8 +2,6 @@ var form = document.getElementById("airline-form");
 var submit = document.getElementById("submit");
 var diet = [];
 
-console.log(diet);
-
 function formAlert() {
     var firstName = form.elements["first-name"].value;
     var lastName = form.elements["last-name"].value;
