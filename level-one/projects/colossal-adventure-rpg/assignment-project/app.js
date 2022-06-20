@@ -62,163 +62,163 @@ while (true) {
         let walk = readline.question("Press (w) to walk forward or (p) to see your player profile. ");
         if (walk === "w") {
             console.log("You begin to walk");
-        walkForward();
-        while(true) {
-            if (attackChance === 1) {
-                break;
-            } else if (attackChance === 2) {
-                attackDamage();
-                console.log("You have been attacked from behind and have not looked had a chance to look at the enemy. The enemy has taken " + totalDamage + " Hit Points from you. ");
-                playerHitPoints = Math.floor(playerHitPoints - totalDamage);             
-                if (playerHitPoints > 0) {
-                    console.log(" You now have " + playerHitPoints + " Hit Points. ");
-                    let runOrAttack = readline.question("Would you like to run (r) or attack (a)? ");
-                    if (runOrAttack === "r") {
-                        console.log("You attempt to run away...");
-                        attackDamage();
-                        console.log("You have been attacked. The enemy has taken " + totalDamage + " Hit Points. ")
-                        playerHitPoints = Math.floor(playerHitPoints - totalDamage);
-                        if (playerHitPoints > 0) {
-                            console.log(" You now have " + playerHitPoints + " Hit Points. ");
-                            escape();
-                            if (escapeChance > 50) {
-                                console.log("You attempt to run away and are successful. ");
-                                break;
-                            } else if (escapeChance < 51) {
-                                console.log("The enemy has you trapped. You must fight back. ");
-                                enemySelection();
-                                if (currentEnemy === 1) {
-                                    currentEnemy = enemyOne;
-                                } else if (currentEnemy === 2) {
-                                    currentEnemy = enemyTwo;
-                                } else if (currentEnemy === 3) {
-                                    currentEnemy = enemyThree;
-                                } ;
-                                console.log("You turn around and see a " + currentEnemy.Monster + ". They have " + currentEnemy.HitPoints + " Hit Points. You attack the " + currentEnemy.Monster);
-                                while (true) {
-                                    if (playerHitPoints > 0) {
-                                        attackDamage();
-                                        currentEnemy.HitPoints = Math.floor(currentEnemy.HitPoints - totalDamage);
-                                        console.log("The enemy has been hit. You took " + totalDamage + " hit points from it. ");
-                                        if (currentEnemy.HitPoints > 0) {
-                                            console.log("They have " + currentEnemy.HitPoints + " hit points. ");
-                                            attackDamage();
-                                            console.log("The enemy attacks back. The enemy has taken " + totalDamage + " Hit Points from you. ")
-                                            playerHitPoints = Math.floor(playerHitPoints - totalDamage);
-                                            if (playerHitPoints > 0) {
-                                                console.log("You now have " + playerHitPoints + " hit points. ");
-                                            } else if (playerHitPoints < 1) {
-                                                break;
-                                            };
-                                        } else if (currentEnemy.HitPoints < 1) {
-                                            console.log("You have successfuly defeated the enemy. You continue on your journey. ");
-                                            playerHitPoints = Math.floor(playerHitPoints + (playerHitPoints * .25));
-                                            inventoryFunction();
-                                            if (inventorySelector === 1) {
-                                                inventory.push(bagOfHolding);
-                                            } else if (inventorySelector === 2) {
-                                                inventory.push(cloakOfProtection);
-                                            } else if (inventorySelector === 3) {
-                                                inventory.push(broomOfFlying);
-                                            } else if (inventorySelector === 4) {
-                                                inventory.push(wandOfMagicMissile);
-                                            } else if (inventorySelector === 5) {
-                                                inventory.push(alchemyJug);
-                                            } else if (inventorySelector === 6) {
-                                                inventory.push(magicWeapon);
-                                            } else if (inventorySelector === 7) {
-                                                inventory.push(illuminatorsTattoo);
-                                            } else if (inventorySelector === 8) {
-                                                inventory.push(bootsOfFalseTracks);
-                                            } else if (inventorySelector === 9) {
-                                                inventory.push(spellScroll);
-                                            } else if (inventorySelector === 10) {
-                                                inventory.push(circletOfBlasting);
-                                            } else if (inventorySelector === 11) {
-                                                inventory.push(iounStone);
-                                            };
-                                            console.log("You now have " + playerHitPoints + " hit points after you take a short rest to heal. You have also gained one special item. Check your inventory to find out what you have received. ");
-                                            break;
-                                        };    
-                                    } else if (playerHitPoints < 1) {
-                                            break;
-                                    };
-                                };                               
-                            }; 
-                        } else if (playerHitPoints < 1) {
-                                break;
-                        };
-                        break;                         
-                    } else if (runOrAttack === "a") {
-                        enemySelection();
-                        if (currentEnemy === 1) {
-                            currentEnemy = enemyOne;
-                        } else if (currentEnemy === 2) {
-                            currentEnemy = enemyTwo;
-                        } else if (currentEnemy === 3) {
-                            currentEnemy = enemyThree;
-                        } ;
-                        console.log("You turn around and see a " + currentEnemy.Monster + ". They have " + currentEnemy.HitPoints + " Hit Points. You attack the " + currentEnemy.Monster);
-                        while (true) {
+            walkForward();
+            while(true) {
+                if (attackChance === 1) {
+                    break;
+                } else if (attackChance === 2) {
+                    attackDamage();
+                    console.log("You have been attacked from behind and have not looked had a chance to look at the enemy. The enemy has taken " + totalDamage + " Hit Points from you. ");
+                    playerHitPoints = Math.floor(playerHitPoints - totalDamage);             
+                    if (playerHitPoints > 0) {
+                        console.log(" You now have " + playerHitPoints + " Hit Points. ");
+                        let runOrAttack = readline.question("Would you like to run (r) or attack (a)? ");
+                        if (runOrAttack === "r") {
+                            console.log("You attempt to run away...");
+                            attackDamage();
+                            console.log("You have been attacked. The enemy has taken " + totalDamage + " Hit Points. ")
+                            playerHitPoints = Math.floor(playerHitPoints - totalDamage);
                             if (playerHitPoints > 0) {
-                                attackDamage();
-                                currentEnemy.HitPoints = Math.floor(currentEnemy.HitPoints - totalDamage);
-                                console.log("The enemy has been hit. You took " + totalDamage + " hit points from it. ");
-                                if (currentEnemy.HitPoints > 0) {
-                                    console.log("They have " + currentEnemy.HitPoints + " hit points. ");
-                                    attackDamage();
-                                    console.log("The enemy attacks back. The enemy has taken " + totalDamage + " Hit Points from you. ")
-                                    playerHitPoints = Math.floor(playerHitPoints - totalDamage);
-                                    if (playerHitPoints > 0) {
-                                        console.log("You now have " + playerHitPoints + " hit points. ");
-                                    } else if (playerHitPoints < 1) {
-                                        break;
-                                    };
-                                } else if (currentEnemy.HitPoints < 1) {
-                                    console.log("You have successfuly defeated the enemy. You continue on your journey. ");
-                                    playerHitPoints = Math.floor(playerHitPoints + (playerHitPoints * .25));
-                                    inventoryFunction();
-                                    if (inventorySelector === 1) {
-                                        inventory.push(bagOfHolding);
-                                    } else if (inventorySelector === 2) {
-                                        inventory.push(cloakOfProtection);
-                                    } else if (inventorySelector === 3) {
-                                        inventory.push(broomOfFlying);
-                                    } else if (inventorySelector === 4) {
-                                        inventory.push(wandOfMagicMissile);
-                                    } else if (inventorySelector === 5) {
-                                        inventory.push(alchemyJug);
-                                    } else if (inventorySelector === 6) {
-                                        inventory.push(magicWeapon);
-                                    } else if (inventorySelector === 7) {
-                                        inventory.push(illuminatorsTattoo);
-                                    } else if (inventorySelector === 8) {
-                                        inventory.push(bootsOfFalseTracks);
-                                    } else if (inventorySelector === 9) {
-                                        inventory.push(spellScroll);
-                                    } else if (inventorySelector === 10) {
-                                        inventory.push(circletOfBlasting);
-                                    } else if (inventorySelector === 11) {
-                                        inventory.push(iounStone);
-                                    };
-                                    console.log("You now have " + playerHitPoints + " hit points after you take a short rest to heal. You have also gained one special item. Check your inventory to find out. ");
+                                console.log(" You now have " + playerHitPoints + " Hit Points. ");
+                                escape();
+                                if (escapeChance > 50) {
+                                    console.log("You attempt to run away and are successful. ");
                                     break;
-                                };    
+                                } else if (escapeChance < 51) {
+                                    console.log("The enemy has you trapped. You must fight back. ");
+                                    enemySelection();
+                                    if (currentEnemy === 1) {
+                                        currentEnemy = enemyOne;
+                                    } else if (currentEnemy === 2) {
+                                        currentEnemy = enemyTwo;
+                                    } else if (currentEnemy === 3) {
+                                        currentEnemy = enemyThree;
+                                    } ;
+                                    console.log("You turn around and see a " + currentEnemy.Monster + ". They have " + currentEnemy.HitPoints + " Hit Points. You attack the " + currentEnemy.Monster);
+                                    while (true) {
+                                        if (playerHitPoints > 0) {
+                                            attackDamage();
+                                            currentEnemy.HitPoints = Math.floor(currentEnemy.HitPoints - totalDamage);
+                                            console.log("The enemy has been hit. You took " + totalDamage + " hit points from it. ");
+                                            if (currentEnemy.HitPoints > 0) {
+                                                console.log("They have " + currentEnemy.HitPoints + " hit points. ");
+                                                attackDamage();
+                                                console.log("The enemy attacks back. The enemy has taken " + totalDamage + " Hit Points from you. ")
+                                                playerHitPoints = Math.floor(playerHitPoints - totalDamage);
+                                                if (playerHitPoints > 0) {
+                                                    console.log("You now have " + playerHitPoints + " hit points. ");
+                                                } else if (playerHitPoints < 1) {
+                                                    break;
+                                                };
+                                            } else if (currentEnemy.HitPoints < 1) {
+                                                console.log("You have successfuly defeated the enemy. You continue on your journey. ");
+                                                playerHitPoints = Math.floor(playerHitPoints + (playerHitPoints * .25));
+                                                inventoryFunction();
+                                                if (inventorySelector === 1) {
+                                                    inventory.push(bagOfHolding);
+                                                } else if (inventorySelector === 2) {
+                                                    inventory.push(cloakOfProtection);
+                                                } else if (inventorySelector === 3) {
+                                                    inventory.push(broomOfFlying);
+                                                } else if (inventorySelector === 4) {
+                                                    inventory.push(wandOfMagicMissile);
+                                                } else if (inventorySelector === 5) {
+                                                    inventory.push(alchemyJug);
+                                                } else if (inventorySelector === 6) {
+                                                    inventory.push(magicWeapon);
+                                                } else if (inventorySelector === 7) {
+                                                    inventory.push(illuminatorsTattoo);
+                                                } else if (inventorySelector === 8) {
+                                                    inventory.push(bootsOfFalseTracks);
+                                                } else if (inventorySelector === 9) {
+                                                    inventory.push(spellScroll);
+                                                } else if (inventorySelector === 10) {
+                                                    inventory.push(circletOfBlasting);
+                                                } else if (inventorySelector === 11) {
+                                                    inventory.push(iounStone);
+                                                };
+                                                console.log("You now have " + playerHitPoints + " hit points after you take a short rest to heal. You have also gained one special item. Check your inventory to find out what you have received. ");
+                                                break;
+                                            };    
+                                        } else if (playerHitPoints < 1) {
+                                            break;
+                                        };
+                                    };                               
+                                }; 
                             } else if (playerHitPoints < 1) {
                                 break;
                             };
-                        };
-                        break;                               
-                    }; 
-                } else if (playerHitPoints < 1) {
+                            break;                         
+                        } else if (runOrAttack === "a") {
+                            enemySelection();
+                            if (currentEnemy === 1) {
+                                currentEnemy = enemyOne;
+                            } else if (currentEnemy === 2) {
+                                currentEnemy = enemyTwo;
+                            } else if (currentEnemy === 3) {
+                                currentEnemy = enemyThree;
+                            } ;
+                            console.log("You turn around and see a " + currentEnemy.Monster + ". They have " + currentEnemy.HitPoints + " Hit Points. You attack the " + currentEnemy.Monster);
+                            while (true) {
+                                if (playerHitPoints > 0) {
+                                    attackDamage();
+                                    currentEnemy.HitPoints = Math.floor(currentEnemy.HitPoints - totalDamage);
+                                    console.log("The enemy has been hit. You took " + totalDamage + " hit points from it. ");
+                                    if (currentEnemy.HitPoints > 0) {
+                                        console.log("They have " + currentEnemy.HitPoints + " hit points. ");
+                                        attackDamage();
+                                        console.log("The enemy attacks back. The enemy has taken " + totalDamage + " Hit Points from you. ")
+                                        playerHitPoints = Math.floor(playerHitPoints - totalDamage);
+                                        if (playerHitPoints > 0) {
+                                            console.log("You now have " + playerHitPoints + " hit points. ");
+                                        } else if (playerHitPoints < 1) {
+                                            break;
+                                        };
+                                    } else if (currentEnemy.HitPoints < 1) {
+                                        console.log("You have successfuly defeated the enemy. You continue on your journey. ");
+                                        playerHitPoints = Math.floor(playerHitPoints + (playerHitPoints * .25));
+                                        inventoryFunction();
+                                        if (inventorySelector === 1) {
+                                            inventory.push(bagOfHolding);
+                                        } else if (inventorySelector === 2) {
+                                            inventory.push(cloakOfProtection);
+                                        } else if (inventorySelector === 3) {
+                                            inventory.push(broomOfFlying);
+                                        } else if (inventorySelector === 4) {
+                                            inventory.push(wandOfMagicMissile);
+                                        } else if (inventorySelector === 5) {
+                                            inventory.push(alchemyJug);
+                                        } else if (inventorySelector === 6) {
+                                            inventory.push(magicWeapon);
+                                        } else if (inventorySelector === 7) {
+                                            inventory.push(illuminatorsTattoo);
+                                        } else if (inventorySelector === 8) {
+                                            inventory.push(bootsOfFalseTracks);
+                                        } else if (inventorySelector === 9) {
+                                            inventory.push(spellScroll);
+                                        } else if (inventorySelector === 10) {
+                                            inventory.push(circletOfBlasting);
+                                        } else if (inventorySelector === 11) {
+                                            inventory.push(iounStone);
+                                        };
+                                        console.log("You now have " + playerHitPoints + " hit points after you take a short rest to heal. You have also gained one special item. Check your inventory to find out. ");
+                                        break;
+                                    };    
+                                } else if (playerHitPoints < 1) {
+                                    break;
+                                };
+                            };
+                            break;                               
+                        }; 
+                    } else if (playerHitPoints < 1) {
+                        break;
+                    };
+                } else if (attackChance === 3) {
+                    break;
+                } else if (attackChance === 4) {
                     break;
                 };
-            } else if (attackChance === 3) {
-                break;
-            } else if (attackChance === 4) {
-                break;
-            };
-        }; 
+            }; 
         } else if (walk === "p") {
             console.log("Player Name: " + playerName + ", Hit Points: " + playerHitPoints + ", Inventory: " + inventory);          
         };
