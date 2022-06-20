@@ -112,6 +112,13 @@ while (true) {
                                                 };
                                             } else if (currentEnemy.HitPoints < 1) {
                                                 console.log("You have successfuly defeated the enemy. You continue on your journey. ");
+                                                if (currentEnemy === 1) {
+                                                    currentEnemy.HitPoints = 75;
+                                                } else if (currentEnemy === 2) {
+                                                    currentEnemy.HitPoints = 50;
+                                                } else if (currentEnemy === 3) {
+                                                    currentEnemy.HitPoints = 25;
+                                                } ;
                                                 playerHitPoints = Math.floor(playerHitPoints + playerHitPoints);
                                                 inventoryFunction();
                                                 if (inventorySelector === 1) {
@@ -176,6 +183,13 @@ while (true) {
                                         };
                                     } else if (currentEnemy.HitPoints < 1) {
                                         console.log("You have successfuly defeated the enemy. You continue on your journey. ");
+                                        if (currentEnemy === 1) {
+                                            currentEnemy.HitPoints = 75;
+                                        } else if (currentEnemy === 2) {
+                                            currentEnemy.HitPoints = 50;
+                                        } else if (currentEnemy === 3) {
+                                            currentEnemy.HitPoints = 25;
+                                        } ;
                                         playerHitPoints = Math.floor(playerHitPoints + playerHitPoints);
                                         inventoryFunction();
                                         if (inventorySelector === 1) {
