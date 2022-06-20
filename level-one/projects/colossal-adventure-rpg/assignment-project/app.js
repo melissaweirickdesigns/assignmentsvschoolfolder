@@ -4,31 +4,32 @@ let playerHitPoints = 100;
 let totalDamage = 0;
 let escapeChance = 0;
 let currentEnemy = 0;
+let selectedEnemy = "";
 let inventory = [];
 let inventorySelector = 0;
 
-let bagOfHolding = " Bag of Holding";
-let cloakOfProtection = " Cloak of Protection";
-let broomOfFlying = " Broom of Flying";
-let wandOfMagicMissile = " Wand of Magic Missile";
-let alchemyJug = " Alchemy Jug";
-let magicWeapon = " Magic Weapon";
-let illuminatorsTattoo = " Illumiators Tattoo";
-let bootsOfFalseTracks = " Boots of False Tracks";
-let spellScroll = " Spell Scroll";
-let circletOfBlasting = " Circlet of Blasting";
-let iounStone = " Ioun Stone";
+const bagOfHolding = " Bag of Holding";
+const cloakOfProtection = " Cloak of Protection";
+const broomOfFlying = " Broom of Flying";
+const wandOfMagicMissile = " Wand of Magic Missile";
+const alchemyJug = " Alchemy Jug";
+const magicWeapon = " Magic Weapon";
+const illuminatorsTattoo = " Illumiators Tattoo";
+const bootsOfFalseTracks = " Boots of False Tracks";
+const spellScroll = " Spell Scroll";
+const circletOfBlasting = " Circlet of Blasting";
+const iounStone = " Ioun Stone";
 
 
-let enemyOne = {
+const enemyOne = {
     Monster: "Bear",
     HitPoints: 75
 };
-let enemyTwo = {
+const enemyTwo = {
     Monster: "Lion",
     HitPoints: 50
 };
-let enemyThree = {
+const enemyThree = {
     Monster: "Monkey",
     HitPoints: 25
 };
@@ -88,20 +89,20 @@ while (true) {
                                     console.log("The enemy has you trapped. You must fight back. ");
                                     enemySelection();
                                     if (currentEnemy === 1) {
-                                        currentEnemy = enemyOne;
+                                        selectedEnemy = enemyOne;
                                     } else if (currentEnemy === 2) {
-                                        currentEnemy = enemyTwo;
+                                        selectedEnemy = enemyTwo;
                                     } else if (currentEnemy === 3) {
-                                        currentEnemy = enemyThree;
+                                        selectedEnemy = enemyThree;
                                     } ;
-                                    console.log("You turn around and see a " + currentEnemy.Monster + ". They have " + currentEnemy.HitPoints + " Hit Points. You attack the " + currentEnemy.Monster);
+                                    console.log("You turn around and see a " + selectedEnemy.Monster + ". They have " + selectedEnemy.HitPoints + " Hit Points. You attack the " + selectedEnemy.Monster);
                                     while (true) {
                                         if (playerHitPoints > 0) {
                                             attackDamage();
-                                            currentEnemy.HitPoints = Math.floor(currentEnemy.HitPoints - totalDamage);
+                                            selectedEnemy.HitPoints = Math.floor(selectedEnemy.HitPoints - totalDamage);
                                             console.log("The enemy has been hit. You took " + totalDamage + " hit points from it. ");
-                                            if (currentEnemy.HitPoints > 0) {
-                                                console.log("They have " + currentEnemy.HitPoints + " hit points. ");
+                                            if (selectedEnemy.HitPoints > 0) {
+                                                console.log("They have " + selectedEnemy.HitPoints + " hit points. ");
                                                 attackDamage();
                                                 console.log("The enemy attacks back. The enemy has taken " + totalDamage + " Hit Points from you. ")
                                                 playerHitPoints = Math.floor(playerHitPoints - totalDamage);
@@ -110,14 +111,14 @@ while (true) {
                                                 } else if (playerHitPoints < 1) {
                                                     break;
                                                 };
-                                            } else if (currentEnemy.HitPoints < 1) {
+                                            } else if (selectedEnemy.HitPoints < 1) {
                                                 console.log("You have successfuly defeated the enemy. You continue on your journey. ");
                                                 if (currentEnemy === 1) {
-                                                    currentEnemy.HitPoints = 75;
+                                                    selectedEnemy.HitPoints = 75;
                                                 } else if (currentEnemy === 2) {
-                                                    currentEnemy.HitPoints = 50;
+                                                    selectedEnemy.HitPoints = 50;
                                                 } else if (currentEnemy === 3) {
-                                                    currentEnemy.HitPoints = 25;
+                                                    selectedEnemy.HitPoints = 25;
                                                 } ;
                                                 playerHitPoints = Math.floor(playerHitPoints + playerHitPoints);
                                                 inventoryFunction();
@@ -159,20 +160,20 @@ while (true) {
                         } else if (runOrAttack === "a") {
                             enemySelection();
                             if (currentEnemy === 1) {
-                                currentEnemy = enemyOne;
+                                selectedEnemy = enemyOne;
                             } else if (currentEnemy === 2) {
-                                currentEnemy = enemyTwo;
+                                selectedEnemy = enemyTwo;
                             } else if (currentEnemy === 3) {
-                                currentEnemy = enemyThree;
+                                selectedEnemy = enemyThree;
                             } ;
-                            console.log("You turn around and see a " + currentEnemy.Monster + ". They have " + currentEnemy.HitPoints + " Hit Points. You attack the " + currentEnemy.Monster);
+                            console.log("You turn around and see a " + selectedEnemy.Monster + ". They have " + selectedEnemy.HitPoints + " Hit Points. You attack the " + selectedEnemy.Monster);
                             while (true) {
                                 if (playerHitPoints > 0) {
                                     attackDamage();
-                                    currentEnemy.HitPoints = Math.floor(currentEnemy.HitPoints - totalDamage);
+                                    selectedEnemy.HitPoints = Math.floor(selectedEnemy.HitPoints - totalDamage);
                                     console.log("The enemy has been hit. You took " + totalDamage + " hit points from it. ");
-                                    if (currentEnemy.HitPoints > 0) {
-                                        console.log("They have " + currentEnemy.HitPoints + " hit points. ");
+                                    if (selectedEnemy.HitPoints > 0) {
+                                        console.log("They have " + selectedEnemy.HitPoints + " hit points. ");
                                         attackDamage();
                                         console.log("The enemy attacks back. The enemy has taken " + totalDamage + " Hit Points from you. ")
                                         playerHitPoints = Math.floor(playerHitPoints - totalDamage);
@@ -181,15 +182,15 @@ while (true) {
                                         } else if (playerHitPoints < 1) {
                                             break;
                                         };
-                                    } else if (currentEnemy.HitPoints < 1) {
+                                    } else if (selectedEnemy.HitPoints < 1) {
                                         console.log("You have successfuly defeated the enemy. You continue on your journey. ");
                                         if (currentEnemy === 1) {
-                                            currentEnemy.HitPoints = 75;
+                                            selectedEnemy.HitPoints = 75;
                                         } else if (currentEnemy === 2) {
-                                            currentEnemy.HitPoints = 50;
+                                            selectedEnemy.HitPoints = 50;
                                         } else if (currentEnemy === 3) {
-                                            currentEnemy.HitPoints = 25;
-                                        } ;
+                                            selectedEnemy.HitPoints = 25;
+                                        };
                                         playerHitPoints = Math.floor(playerHitPoints + playerHitPoints);
                                         inventoryFunction();
                                         if (inventorySelector === 1) {
