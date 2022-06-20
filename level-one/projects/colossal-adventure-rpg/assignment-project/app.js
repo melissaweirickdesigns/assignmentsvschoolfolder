@@ -112,7 +112,7 @@ while (true) {
                                                 };
                                             } else if (currentEnemy.HitPoints < 1) {
                                                 console.log("You have successfuly defeated the enemy. You continue on your journey. ");
-                                                playerHitPoints = Math.floor(playerHitPoints + (playerHitPoints * .25));
+                                                playerHitPoints = Math.floor(playerHitPoints + playerHitPoints);
                                                 inventoryFunction();
                                                 if (inventorySelector === 1) {
                                                     inventory.push(bagOfHolding);
@@ -176,7 +176,7 @@ while (true) {
                                         };
                                     } else if (currentEnemy.HitPoints < 1) {
                                         console.log("You have successfuly defeated the enemy. You continue on your journey. ");
-                                        playerHitPoints = Math.floor(playerHitPoints + (playerHitPoints * .25));
+                                        playerHitPoints = Math.floor(playerHitPoints + playerHitPoints);
                                         inventoryFunction();
                                         if (inventorySelector === 1) {
                                             inventory.push(bagOfHolding);
@@ -222,7 +222,6 @@ while (true) {
         } else if (walk === "p") {
             console.log("Player Name: " + playerName + ", Hit Points: " + playerHitPoints + ", Inventory: " + inventory);          
         };
-        
     } else if (playerHitPoints < 1) {
         console.log("The enemy lays a critical hit on you. So long partner, you have died! Game Over!");
         break;
