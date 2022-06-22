@@ -1,6 +1,5 @@
 const readline = require("readline-sync");
 
-let isPlayerAlive = true;
 let playerHitPoints = 100;
 let totalDamage = 0;
 let escapeChance = 0;
@@ -130,9 +129,7 @@ function attackLoop() {
 };
 
 let playerName = readline.question("You open the door, and find your self standing on narrow walkway leading to the middle of the room. In the middle of room, you see a stand with a book on it. You walk to the book and open it. It asks, What is your Name? ");
-
 console.log(playerName + ", Welcome. A door suddenly appears and opens to a dense forest.");
-
 while (playerHitPoints > 0) {
         let walk = readline.question("Press (w) to walk forward or (p) to see your player profile. ");
         if (walk === "w") {
@@ -177,5 +174,4 @@ while (playerHitPoints > 0) {
             console.log("Player Name: " + playerName + ", Hit Points: " + playerHitPoints + ", Inventory: " + inventory);          
         };
 };
-
 console.log("The enemy lays a critical hit on you. So long partner, you have died! Game Over!");
