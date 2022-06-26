@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+#container {
+    background-color: rgb(251, 253, 253);
+    max-width: 700px;
+    width: 100%;
+    padding: 2%;
+    border-radius: 6px;
+}
+
+#container .title {
+    font-size: 25px;
+    position: relative;
+}
+
+#container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 25%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+#container form .userDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .userDetails .inputBox {
+    width: calc(100% / 2px - 20px);
+    margin-bottom: 5px;
+}
+
+.userDetails .inputBox .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.userDetails .inputBox input {
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+    border: 1px solid #ccc;
+    padding: 5%;
+}
+form .genderDetails .genderTitle {
+    font-size: 16px;
+}
+form .genderDetails .category {
+    display: inline-block;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.genderDetails .category label {
+    padding: 7%;
+}
+
+.genderDetails .category span {
+    font-size: 14px;
+}
+
+form .dietDetails .category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    justify-content: space-between;
+}
+
+form .dietDetails .category div{    
+    width: 100%;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 350px) {
+    form .dietDetails .category {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+}

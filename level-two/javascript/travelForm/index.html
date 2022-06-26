@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <title>Travel Form</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="You just started your own airline, and you need to create a form to collect data about your passengers' upcoming travel plans so they can book their flight.">
+        <meta name="author" content="Melissa Weirick 6/24/2022 8013866272 melissaweirickdesigns@gmail.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div id="container">
+        <div class="title">Passenger Information</div>
+	    <form action="#" name="passengerOne"> 
+            <div class="userDetails">
+                <div class="inputBox">
+                    <span class="details">First Name: </span>
+                    <input type="text" placeholder="First Name" name="fName" id="firstName" required>
+                </div>
+                <div class="inputBox">
+                    <span class="details">Last Name: </span>
+                    <input type="text" placeholder="Last Name" name="lName" id="lastName" required>
+                </div>
+                <div class="inputBox">
+                    <span class="details">Age: </span>
+                    <input type="number" id="age" name="age" min="1" max="99" required>
+                </div>
+                <div class="genderDetails">
+                    <span class="genderTitle">Gender: </span>
+                    <div class="category">
+                        <label for="">
+                            <input type="radio" name="gender" class="gender" id="male" value="Male">
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="">
+                            <input type="radio" name="gender" class="gender" id="female" value="Female">
+                            <span class="gender">Female</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <span class="details">Destination: </span>
+                    <select name="destination" id="destination" required>
+                        <option label="Dubai, United Arab Emirates" value="Dubai, United Arab Emirates"></option>
+                        <option label="London, United Kingdom" value="London, United Kingdom"></option>
+                        <option label="Cancun, Mexico" value="Cancun, Mexico"></option>
+                        <option label="Bali, Indonesia" value="Bali, Indonesia"></option>
+                        <option label="Crete, Greece" value="Crete, Greece"></option>
+                        <option label="Rome, Italy" value="Rome, Italy"></option>
+                        <option label="Cabo San Lucas, Mexico" value="Cabo San Lucas, Mexico"></option>
+                        <option label="Istanbul, Turkey" value="Istanbul, Turkey"></option>
+                        <option label="Paris, France" value="Paris, France"></option>
+                        <option label="Hurghada, Egypt" value="Hurghada, Egypt"></option>
+                    </select>
+                </div>
+                <div class="dietDetails">
+                    <span class="dietTitle">Dietary Restrictions: (Check all that apply) </span>
+                    <div class="category">
+                        <div>
+                            <input type="checkbox" id="vegetarian" name="diet" value="Vegetarian" class="checkbox">
+                            <label for="vegetarian">Vegetarian</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="vegan" name="diet" value="Vegan" class="checkbox">
+                            <label for="vegan">Vegan</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="lactose" name="diet" value="Lactose Intolerance" class="checkbox">
+                            <label for="lactose">Lactose Intolerance</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="gluten" name="diet" value="Gluten Free" class="checkbox">
+                            <label for="gluten">Gluten Free</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="treeNut" name="diet" value="Tree Nut" class="checkbox">
+                            <label for="treeNut">Tree Nut</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="peanut" name="diet" value="Peanut" class="checkbox">
+                            <label for="peanut">Peanut</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="kosher" name="diet" value="Kosher" class="checkbox">
+                            <label for="kosher">Kosher</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="halal" name="diet" value="Halal" class="checkbox">
+                            <label for="halal">Halal</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="none" name="diet" value="None" class="checkbox">
+                            <label for="none">None</label>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" id="submit" value="Find Flights">
+            </div>  
+        </form>
+    </div>
+   	<script src="app.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    </body>
+</html>
+
+
+<!-- div
+                
+            
+                
+            </div>
+                        -->
