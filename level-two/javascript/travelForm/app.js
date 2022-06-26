@@ -4,6 +4,7 @@ const form = document.passengerOne;
 const newLine = "\r\n"
 let dietRestrictions = [];
 let passengerInfo = new Object();
+let passengerList = [];
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -23,7 +24,7 @@ form.addEventListener('submit', (e) => {
     form.fName.value = "";
     form.lName.value = "";
     form.age.value = "";
-    form.destination.selectedIndex = -1;
+    form.destination.selectedIndex = 1;
     for (i=0; i<form.gender.length; i++) {
         form.gender[i].checked = false;
     };
@@ -31,4 +32,7 @@ form.addEventListener('submit', (e) => {
     for (i=0; i<form.diet.length; i++) {
         form.diet[i].checked = false;
     };
+    passengerList.push(passengerInfo);
+    console.log(passengerList);
+    dietRestrictions = [];
 });
