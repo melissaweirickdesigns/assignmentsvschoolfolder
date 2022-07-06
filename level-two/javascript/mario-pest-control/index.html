@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Mario Pest Control</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Keep track of how many baddies Mario caught for Princess Peach so he can send her a bill">
+        <meta name="author" content="Melissa Weirick 6/26/2022 8013866272 melissaweirickdesigns@gmail.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+	<div class="container">
+            <div class="tite" id="title">Mario Pest Control</div>
+            <div class="baddiesSection" id="goombaSection">
+                <div class="photo">
+                    <img src="Goomba_-_Mario_Party_Superstars.webp" alt="Goomba">
+                </div>
+                <div class="name">Goomba</div>
+                <div class="qty">
+                    <form action="#" name="gForm">
+                    <label for="gqty">Quantity Found</label>
+                    <input type="number" name="gQty">
+                    <input type="submit" value="ADD" class="buttons" name="gSubmit">
+                    </form>
+                </div>
+                <div class="price">
+                    <span id="gQtyPrice">5</span>
+                    <img src="41okVvjr0NL.jpg" alt="Coins">
+                </div>
+                <div class="totals one">
+                    <p class="totalTitle">Totals: </p>
+                    <div class="totalQtyFound">Total QTY Found:</div>
+                    <div class="totalQtyfoundContainer">
+                        <input type="text" id="goombaQtyTotal" value="0" readonly>
+                    </div>
+                    <div class="totalOwed">Total Money Owed:</div>
+                    <div class="totalOwedContainer" >
+                        <input type="text" id="goombaCoinsOwed" value="0" readonly>
+                    </div>  
+                </div>              
+            </div>
+            <div class="baddiesSection" id="bobOmbsSection">
+                <div class="photo">
+                    <img src="Bob-ombMK8.webp" alt="Bob-Omb">
+                </div>
+                <div class="name">Bob-ombs</div>
+                <div class="qty">
+                    <form action="#" name="bForm">
+                        <label for="bqty">Quantity Found</label>
+                        <input type="number" name="bQty">
+                        <input type="submit" value="ADD" class="buttons" name="bSubmit">
+                    </form>
+                </div>
+                <div class="price">
+                    <span id="bQtyPrice">7</span>
+                    <img src="41okVvjr0NL.jpg" alt="Coins">
+                </div>
+                <div class="totals two">
+                    <p class="totalTitle">Totals: </p>
+                    <div class="totalQtyFound">Total QTY Found:</div>
+                    <div class="totalQtyfoundContainer">
+                        <input type="text" id="bobOmbsQtyTotal" value="0" readonly>
+                    </div>
+                    <div class="totalOwed">Total Money Owed:</div>
+                    <div class="totalOwedContainer" >
+                        <input type="text" id="bobOmbsCoinsOwed" value="0" readonly>
+                    </div>    
+                </div>
+            </div>
+            <div class="baddiesSection" id="cheepCheepsSection">
+                <div class="photo">
+                <img src="1200px-CheepCheepNSMBU.png" alt="Cheep-Cheep">
+                </div>
+                <div class="name">Cheep-cheeps</div>
+                <div class="qty">
+                    <form action="#" name="cForm">
+                    <label for="cqty">Quantity Found</label>
+                    <input type="number" name="cQty">
+                    <input type="submit" value="ADD" class="buttons" name="cSubmit">
+                    </form>
+                </div>
+                <div class="price">
+                    <span id="cQtyPrice">11</span>
+                    <img src="41okVvjr0NL.jpg" alt="Coins">
+                </div>
+                <div class="totals two">
+                    <p class="totalTitle">Totals: </p>
+                    <div class="totalQtyFound">Total QTY Found:</div>
+                    <div class="totalQtyfoundContainer">
+                        <input type="text" id="cheepCheepsQtyTotal" value="0" readonly>
+                    </div>
+                    <div class="totalOwed">Total Coins Owed:</div>
+                    <div class="totalOwedContainer" >
+                        <input type="text" id="cheepCheepsCoinsOwed" value="0" readonly>
+                    </div>   
+                </div>
+            </div>
+            <div class="total" id="totalInvoice">
+                    <p class="totalTitle">Total Invoice</p>
+                    <input type="submit" value="Submit" id="totalInvoiceSubmit">
+                    <div class="totalQtyFound">Total Baddies Found:</div>
+                    <div class="totalQtyfoundContainer">
+                        <input type="text" id="totalBaddies" value="0" readonly>
+                    </div>
+                    <div class="totalOwed">Total Coins Owed:</div>
+                    <div class="totalOwedContainer">
+                        <input type="text" id="totalInvoiceAmount" value="0" readonly>
+                    </div>  
+            </div>
+            <div class="footer" id="footer">
+                <div class="email">Mario@MarioPestControl.net</div>
+                <div class="websiteURL">www.MarioPestControl.net</div>
+                <div class="address">123 Mario World St, San Francisco, CA 90210</div>
+            </div>
+    </div>
+   	<script src="app.js"></script>
+    </body>
+</html>
