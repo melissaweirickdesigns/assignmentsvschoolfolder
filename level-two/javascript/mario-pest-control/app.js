@@ -32,11 +32,22 @@ function totalInvoice() {
     totalInvoiceAmount.value = totalInvoiceAmountNewTotal;
 };
 
+function clearInvoice() {
+    goombaQtyTotal.value = "0";
+    goombaCoinsOwed.value = "0";
+    bobOmbsQtyTotal.value = "0";
+    bobOmbsCoinsOwed.value = "0";
+    cheepCheepsQtyTotal.value ="0";
+    cheepCheepsCoinsOwed.value = "0";
+    totalBaddies.value = "0";
+    totalInvoiceAmount.value = "0";
+};
+
 goombaQtyAdd.addEventListener('click', (e) => {
     e.preventDefault(); 
     goombaQtyNewTotal = Math.floor(Number(gForm.gQty.value) + Number(goombaQtyTotal.value)); 
     goombaQtyTotal.value = goombaQtyNewTotal;
-    goombaNewCoinsOwed = Math.floor(Number(gForm.gQty.value) * Number(gQtyPrice.innerHTML)); 
+    goombaNewCoinsOwed = Math.floor(Number(gForm.gQty.value) * Number(gQtyPrice.textContent)); 
     goombaNewCoinsMath = Math.floor(Number(goombaCoinsOwed.value) + Number(goombaNewCoinsOwed))
     goombaCoinsOwed.value = goombaNewCoinsMath;
     totalInvoice();
@@ -47,7 +58,7 @@ bobOmbsQtyAdd.addEventListener('click', (e) => {
     e.preventDefault();  
     bobOmbsQtyNewTotal = Math.floor(Number(bForm.bQty.value) + Number(bobOmbsQtyTotal.value)); 
     bobOmbsQtyTotal.value = bobOmbsQtyNewTotal;
-    bobOmbsNewCoinsOwed = Math.floor(Number(bForm.bQty.value) * Number(bQtyPrice.innerHTML)); 
+    bobOmbsNewCoinsOwed = Math.floor(Number(bForm.bQty.value) * Number(bQtyPrice.textContent)); 
     bobOmbsNewCoinsMath = Math.floor(Number(bobOmbsCoinsOwed.value) + Number(bobOmbsNewCoinsOwed))
     bobOmbsCoinsOwed.value = bobOmbsNewCoinsMath;
     totalInvoice();
@@ -58,7 +69,7 @@ cheepCheepsQtyAdd.addEventListener('click', (e) => {
     e.preventDefault(); 
     cheepCheepsQtyNewTotal = Math.floor(Number(cForm.cQty.value) + Number(cheepCheepsQtyTotal.value)); 
     cheepCheepsQtyTotal.value = cheepCheepsQtyNewTotal;
-    cheepCheepsNewCoinsOwed = Math.floor(Number(cForm.cQty.value) * Number(cQtyPrice.innerHTML)); 
+    cheepCheepsNewCoinsOwed = Math.floor(Number(cForm.cQty.value) * Number(cQtyPrice.textContent)); 
     cheepCheepsNewCoinsMath = Math.floor(Number(cheepCheepsCoinsOwed.value) + Number(cheepCheepsNewCoinsOwed))
     cheepCheepsCoinsOwed.value = cheepCheepsNewCoinsMath;
     totalInvoice();
@@ -68,15 +79,8 @@ cheepCheepsQtyAdd.addEventListener('click', (e) => {
 totalInvoiceSubmit.addEventListener('click', (e) => {
     e.preventDefault();
     if (totalInvoiceAmount.value > "0") {
+        clearInvoice();
         alert("You have submitted your invoice to Princess Peach. Please wait 30 days for payment.");
-    goombaQtyTotal.value = "0";
-    goombaCoinsOwed.value = "0";
-    bobOmbsQtyTotal.value = "0";
-    bobOmbsCoinsOwed.value = "0";
-    cheepCheepsQtyTotal.value ="0";
-    cheepCheepsCoinsOwed.value = "0";
-    totalBaddies.value = "0";
-    totalInvoiceAmount.value = "0";
     } else {
         alert("You have not entered any Baddies Found!");
     } 
