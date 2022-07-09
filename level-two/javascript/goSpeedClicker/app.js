@@ -9,6 +9,11 @@ clickMe.disabled = true;
 let timerActivated = false;
 
 function totalClicksDisplay() {
+    if (localStorage.getItem("startDisabled") === "true") {
+        start.disabled = true; 
+    } else {
+        start.disabled = false;
+    }
     totalClicks.textContent = localStorage.getItem("totalClicksStorage");
 };
 
@@ -40,6 +45,7 @@ clickMe.addEventListener('click', (e) => {
 reset.addEventListener('click', (e) => {
     totalClicksNewTotal = "0";
     localStorage.setItem("totalClicksStorage", totalClicksNewTotal);
+    localStorage.setItem("startDisabled", "false");
     totalClicksDisplay();
     clickMe.disabled = true;
     count.textContent = 10;
@@ -52,6 +58,7 @@ reset.addEventListener('click', (e) => {
 start.addEventListener('click', (e) => {
     clickMe.disabled = false;
     start.disabled = true;
+    localStorage.setItem("startDisabled", "true");
     startTimer();
 });
 
