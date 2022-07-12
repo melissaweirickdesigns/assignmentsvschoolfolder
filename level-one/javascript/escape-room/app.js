@@ -5,12 +5,16 @@ let playerIsFree = false;
 
 console.log("You are in a square room with one door and no windows. The door is on the South wall. You see a bookshelf on the North wall. You see a desk on the East wall. You see a hole in the West wall. What do you do?")
 
-while (playerIsFree = True) {
+while (playerIsFree === false) {
     let introQuestion = readline.question('Go to the door (d), Go to the Bookshelf (b), Go to the table (t), or Go to the hole in the wall (h).');
     if (introQuestion === "d") {
         if (iHaveTheKey === 0) {
             console.log("Door is locked. Hmmm...there must be a key somewhere. Lets search for it.");
-        };
+        } else {
+            playerIsFree === true;
+            console.log("The door opens. You are now Free! Congratulations, you have won the game.");
+            break;
+        }
     } else if (introQuestion === "b") {
         console.log("There are many good books here, but no key");
     } else if (introQuestion === "t") {
@@ -26,5 +30,5 @@ while (playerIsFree = True) {
         };
     };
 };
-console.log("The door opens. You are now Free! Congratulations, you have won the game.");
+
 
