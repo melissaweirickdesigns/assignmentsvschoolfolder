@@ -29,10 +29,10 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    transition-property: box-shadow;
-    -webkit-transition: box-shadow;
-    -moz-transition: box-shadow;
-    -o-transition: box-shadow;
+    transition-property: box-shadow, border;
+    -webkit-transition: box-shadow, border;
+    -moz-transition: box-shadow, border;
+    -o-transition: box-shadow, border;
     transition-duration: .7s;
     transition-timing-function: ease-in-out;
 }
@@ -112,16 +112,15 @@ audio::-webkit-media-controls-timeline-container {
 }
 
 
-
 #one {
     grid-area: one;
     background: linear-gradient(to bottom right, #4c098b, #6c2ea4, #8b4dbd, #aa6cd7, #c98bf2);
-    
 }
 
 #one:hover {
     box-shadow: 0px 0px 100px 1px rgb(252, 199, 252);
     background: linear-gradient(to top left, #4c098b, #6c2ea4, #8b4dbd, #aa6cd7, #c98bf2);
+    border-style: dashed;
 }
 
 #two {
@@ -132,6 +131,7 @@ audio::-webkit-media-controls-timeline-container {
 #two:hover {
     box-shadow: 0px 0px 100px 1px rgb(162, 205, 253);
     background: linear-gradient(to top left, #0a0669, #1d2b8e, #2e4eb4, #3f71da, #5196ff);
+    border-style: dotted;
 }
 
 #three {
@@ -142,6 +142,7 @@ audio::-webkit-media-controls-timeline-container {
 #three:hover {
     box-shadow: 0px 0px 100px 1px rgb(156, 248, 184);
     background: linear-gradient(to top left, #024e2c, #007538, #009e40, #21c941, #4bf43a);
+    border-style: double;
 }
 
 #announcement {
@@ -162,6 +163,7 @@ audio::-webkit-media-controls-timeline-container {
 #four:hover {
     box-shadow: 0px 0px 100px 1px rgb(248, 205, 156);
     background: linear-gradient(to top left, #ffb100, #f1a200, #e29300, #d38500, #c47700);
+    border-style: groove;
 }
 
 #five {
@@ -172,6 +174,7 @@ audio::-webkit-media-controls-timeline-container {
 #five:hover {
     box-shadow: 0px 0px 100px 1px rgb(247, 248, 156);
     background: linear-gradient(to top left, #e8ff4c, #dfed3d, #d6db2d, #ccca1b, #c2b900);
+    border-bottom-style: dotted;
 }
 
 #six {
@@ -182,6 +185,7 @@ audio::-webkit-media-controls-timeline-container {
 #six:hover {
     box-shadow: 0px 0px 100px 1px rgb(248, 156, 156);
     background: linear-gradient(to top left, #ff0000, #d80209, #b2060d, #8d090d, #690a0a);
+    border-top-style: double;
 }
 
 #footer {
