@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Julius+Sans+One&family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(http://www.csszengarden.com/214/bamboo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h3 {
+    margin-top: 20px;
+    line-height: 40px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 100;
+    font-size: xx-large;
+    color: rgb(82, 80, 78);
+}
+
+p {
+    margin: 10px 0 10px 0;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .6fr 1.2fr 1fr 1fr .5fr .3fr;
+    grid-template-areas:
+    "headerContainer"
+    "highlightsContainer"
+    "participationContainer"
+    "requirementContainer"
+    "closing"
+    "footer";
+    position: relative;
+}
+
+.headerContainer {    
+    grid-area: headerContainer;
+    border-top: solid rgb(4, 85, 81) 12px;
+    background-image: url(http://www.csszengarden.com/214/huntington.jpg);
+    background-size: cover; 
+    background-position: center;   
+    background-repeat: no-repeat;
+}
+
+.headerContainer .contoursContainer {
+    height: 100%;
+    align-items: center;
+    background-image: url(http://www.csszengarden.com/214/contours-opaque.png);
+}
+
+.headerContainer .contoursContainer .gridContainer {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "titleSection viewAll";
+    align-items: center;
+    background-image: url(http://www.csszengarden.com/214/gridlines.png);
+}
+
+.headerContainer .contoursContainer .gridContainer .titleSection {
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.headerContainer .contoursContainer .gridContainer header img {
+    margin-left: 190px;
+    max-width: 200px;
+    height: 200px;
+    opacity: .7;
+}
+
+.headerContainer .contoursContainer .gridContainer .titleSection .titleWording {
+    margin: 35px;
+}
+
+.headerContainer .contoursContainer .gridContainer .titleSection .titleWording .title {
+    font-size: 52px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 400;
+    line-height: 45px;
+    margin-bottom: 15px;
+}
+
+.headerContainer .contoursContainer .gridContainer .titleSection .titleWording .subtitle {
+    font-size: 30px;
+    color: rgba(250, 250, 250, 0.5);
+    font-weight: 400;
+}
+
+.viewAll {
+    display: grid;
+    grid-template-columns: 1fr .2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "viewAllButton arrowButton";
+    gap: .1em;
+    background-color: rgba(93, 139, 116, 0.26);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewAllButton {
+    font-family: 'Julius Sans One', sans-serif;
+    background-color: rgba(155, 182, 179, 0.2);
+    border: none;
+    color: rgb(255, 255, 255, .5);
+    font-size: 20px;
+    transition: color .5s, background-color .5s;
+    grid-area: viewAllButton;
+    line-height: 83px;
+    margin-left: 20px;
+}
+
+.viewAllButton:hover {
+    background-color: rgba(155, 182, 179, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+.arrowButton {
+    margin-right: 40px;
+    font-family: 'Julius Sans One', sans-serif;
+    background-color: rgba(155, 182, 179, 0.2);
+    border: none;
+    color: rgb(255, 255, 255, .5);
+    font-size: 72px;
+    transition: color .5s, background-color .5s;
+    grid-area: arrowButton;
+}
+
+.arrowButton:hover {
+    background-color: rgba(155, 182, 179, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+.highlightsContainer {
+    grid-area: highlightsContainer;
+    background-color: rgb(250, 250, 250);
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "assignmentDescription featuredAssignments";
+}
+
+.assignmentDescription {
+    grid-area: assignmentDescription;
+    margin: 20px 80px 5px 190px;
+    font-size: 19px;
+}
+
+.fileDesign {
+    font-family: 'Julius Sans One', sans-serif;
+    color:rgb(192, 186, 153);
+    transition: background-color .2s, color .2s, padding .2s, border .2s;
+}
+
+.green {
+    background-color: rgb(192, 186, 153);
+    padding: 2px;
+    color: rgb(160, 155, 124);
+    border-radius: 2px;
+}
+
+.fileDesign:hover {
+    color:rgb(250, 250, 250);
+    background-color: rgba(100, 146, 148, 0.795);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fileDesign:hover i {
+    color:rgb(250, 250, 250);
+    background-color: rgba(100, 146, 148, 0.795);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.featuredAssignments {
+    display: flex;
+    flex-direction: column;    
+    line-height: 24px;
+    grid-area: featuredAssignments;
+    background-color: rgba(93, 139, 116, 0.26);
+}
+
+.featuredAssignments div {
+    margin: 30px 20px 20px 30px;
+}
+
+.featuredAssignments hr {
+    margin: 0px 20px 0px 30px;
+}
+
+.highlightedProject {
+    margin: 15px;
+    
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+    padding-bottom: 5px;
+    font-weight: lighter;
+}
+
+a {
+   text-decoration: none; 
+   color: rgb(93, 143, 112);
+   font-weight: lighter;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    margin:1px 0;
+    position:relative;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(10%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+
+hr:before {
+    content: "";
+    display: block;
+    border-top: solid 1px #f9f9f900;
+    width: 100%;
+    height: .5px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.smallLineHeight {
+    line-height: 5px;
+}
+
+.participationContainer {
+    grid-area: participationContainer;
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "participation resources";
+    background-color: rgba(91, 179, 91, 0.151);
+}
+
+.participation {
+    margin: 20px 80px 20px 190px;
+    font-size: 19px;
+    grid-area: participation;
+}
+
+.resources {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+    grid-area: resources;
+    background-color: rgba(93, 139, 116, 0.26);
+}
+
+.resourceLink {
+    margin: 40px 80px 20px 30px;
+}
+
+.resources hr {
+    margin: 0px 80px 0px 20px;
+}
+
+.requirementContainer {
+    grid-area: requirementContainer;
+    background-color: rgba(255,255,255);
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "requirementList empty";
+}
+
+.requirementList {
+    grid-area: requirementList;
+    margin: 20px 80px 20px 190px;
+    font-size: 19px;
+}
+
+.empty {
+    grid-area: empty;
+    background-color: rgba(93, 139, 116, 0.26);
+}
+
+.closing {
+    border: none;
+    grid-area: closing;
+}
+
+.headerContainer .contoursContainer .gridContainerTwo {
+    border: none;
+    height: 100%;
+    background-image: url(http://www.csszengarden.com/214/gridlines.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.noBorder {
+    border: none;
+    background-image: url("http://www.csszengarden.com/214/koi.jpg");
+    height: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.459);
+}
+
+.noBorder a {
+    color: rgba(255, 255, 255, 0.644);
+    line-height: 50px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(4, 85, 81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
+
+.footer .footerLink {
+    margin: 20px 50px;
+}
+
+.dottedUnderlineWhite {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(255, 255, 255);
+    line-height: 22px;
+}
+
+.dottedUnderline {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    line-height: 15px;
+}
+
+.noUnderline {
+    position: relative;
+    display: inline-block;
+    line-height: normal;
+}
+
+.viewAllButton {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dottedUnderlineWhite .tooltip {
+    color: black;
+    white-space: nowrap;
+    margin-top: 25px;
+    left: 60%;
+    margin-right: 20px;
+    padding: 4px;
+    visibility: hidden;
+    min-width: 100px;
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    border: groove black 1px;
+    position: absolute;
+    z-index: 1;
+    line-height: normal;
+    transform: translateX(-90%);
+}
+
+.dottedUnderline .tooltip {
+    color: black;
+    white-space: nowrap;
+    margin-top: 25px;
+    left: 60%;
+    margin-right: 20px;
+    padding: 4px;
+    visibility: hidden;
+    min-width: 100px;
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    border: groove black 1px;
+    position: absolute;
+    z-index: 1;
+    line-height: normal;
+    transform: translateX(-90%);
+}
+
+.noUnderline .tooltip {
+    color: black;
+    white-space: nowrap;
+    margin-top: 25px;
+    left: 60%;
+    padding: 4px;
+    visibility: hidden;
+    min-width: 100px;
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    border: groove black 1px;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-90%);
+}
+
+.viewAllButton .tooltip {
+    color: black;
+    white-space: nowrap;
+    margin-top: 25px;
+    left: 60%;
+    margin-right: 20px;
+    padding: 4px;
+    visibility: hidden;
+    min-width: 100px;
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    border: groove black 1px;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-90%);
+}
+
+.dottedUnderlineWhite:hover .tooltip {
+    visibility: visible;
+}
+
+.dottedUnderline:hover .tooltip {
+    visibility: visible;
+}
+
+.noUnderline:hover .tooltip {
+    visibility: visible;
+}
+
+.viewAllButton:hover .tooltip {
+    visibility: visible;
+}
+
+.hrHidden {
+    display: none;
+}
+
+@media only screen and (max-width: 1130px) {
+    .container {
+        grid-template-rows: .3fr 1.25fr .9fr .7fr .2fr .1fr;
+    }
+
+    .headerContainer .contoursContainer .gridContainer {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .1fr;
+        grid-template-areas: 
+        "titleSection"
+        "viewAll";
+    }
+
+    .headerContainer .contoursContainer .gridContainer .titleSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .headerContainer .contoursContainer .gridContainer header img {
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+
+    .viewAllButton {
+        line-height: 100px;
+        margin-left: 0px;
+    }
+
+    .viewAllButton .tooltip {
+        line-height: normal;
+    }
+    
+    .arrowButton {
+        line-height: 100px;
+        font-size: 72px;
+        margin-right: 0px;
+    }
+
+    .highlightsContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 1fr;
+        grid-template-areas: 
+        "featuredAssignments"
+        "assignmentDescription";
+    }
+
+    .featuredAssignments {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .featuredAssignments h4 {
+        margin-left: 20px;
+    }
+
+    .featuredAssignments p {
+        margin-left: 20px;
+    }
+    
+    hr {
+        display: none;
+    }
+
+    .hrHidden {
+        display: flex;
+    }
+
+    .assignmentDescription {
+        grid-area: assignmentDescription;
+        margin: 20px 80px 5px 80px;
+    }
+
+    .participationContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr;
+        grid-template-areas: 
+        "resources"
+        "participation";
+    }
+
+    #sevenR {
+        display: none;
+    }
+
+    .resources {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resourceLink a {
+        margin-left: 20px;
+        line-height: 10px;
+    }
+
+    .participation {
+        margin: 20px 80px 0px 80px;
+    }
+
+    .empty {
+        display: none;
+    }
+
+    .requirementContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .requirementList {
+        margin: 20px 80px 0px 80px;
+    }
+}
