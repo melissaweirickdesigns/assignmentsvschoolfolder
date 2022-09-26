@@ -30,7 +30,7 @@ function parseSentence({location, duration}){
   }
   
   console.log(parseSentence({
-    location: "Burly Idaho",
+    location: "Burly, Idaho",
     duration: "2 weeks"
   }));
 
