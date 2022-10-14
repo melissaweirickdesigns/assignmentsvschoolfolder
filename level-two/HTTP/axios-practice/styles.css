@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+body {
+    background-image: linear-gradient(120deg, rgb(33, 191, 202), rgb(28, 185, 224));
+    color: white;
+    font-family: "Raleway", sans-serif;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.5rem;
+    min-height: 12vh;
+}
+
+form {
+    min-height: 10vh;
+}
+
+h1, form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: none;
+    margin: 0.5rem;
+    background-color: white;
+    border-radius: .2rem;
+}
+
+form button {
+    color:rgb(33, 191, 202);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: rgb(212, 185, 29);
+    color: rgb(30, 175, 185);
+}
+
+h6, h3 {
+    color: black;
+}
+
+h6, h3, button {
+    margin: .2 rem;
+    padding: .2rem;
+    border-radius: .2rem;
+    margin-left: 1rem;
+}
+
+button {
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    margin: .5rem;
+    border: none;
+    cursor: pointer;
+}
