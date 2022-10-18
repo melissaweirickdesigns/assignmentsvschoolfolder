@@ -31,14 +31,12 @@ function getData() {
                 //PUT REQUEST
                 const completeRequest = function(id) {
                     if (`completeButton${response.data[i]._id}.checked`) {
-                        console.log(response.data[i].completed)
-                        console.log(id)
-                        axios.put(`https://api.vschool.io/mollymoosebinx/todo/${id}`,completedActionTrue)
+                        axios.put(`https://api.vschool.io/mollymoosebinx/todo/${id}`, completedActionTrue)
                             .then(response => {
-                                console.log(response.data)
-                                getData()
+                                getData(),
                                 window.location.reload()  
-                            })
+                            }
+                            )
                             .catch(error => console.log(error.data))
                       } else {
                         console.log("Checkbox is not checked..");
@@ -53,7 +51,7 @@ function getData() {
                     //DELETE REQUEST
                     axios.delete(`https://api.vschool.io/mollymoosebinx/todo/${id}`)
                         .then(response => {
-                            getData()
+                            getData(),
                             window.location.reload()
                         })
                         .catch(error => console.log(error.data))
@@ -80,14 +78,14 @@ toDoform.addEventListener("submit", function(e){
         imgUrl: toDoform.imgUrl.value,
         completed: false
     }
-    toDoform.title.value = ""
-    toDoform.price.value = ""
-    toDoform.description.value = ""
+    toDoform.title.value = "",
+    toDoform.price.value = "",
+    toDoform.description.value = "",
     toDoform.imgUrl.value = ""
 
     axios.post("https://api.vschool.io/mollymoosebinx/todo", newTodo)
         .then(response => {
-            getData()
+            getData(),
             window.location.reload()
         })
         .catch(error => console.log(error.data.title))
