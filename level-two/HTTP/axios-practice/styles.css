@@ -15,11 +15,11 @@ body {
 
 h1 {
     font-size: 1.5rem;
-    min-height: 12vh;
+    min-height: 5vh;
 }
 
 form {
-    min-height: 10vh;
+    min-height: 2vh;
 }
 
 h1, form {
@@ -35,6 +35,7 @@ form input, form button {
     margin: 0.5rem;
     background-color: white;
     border-radius: .2rem;
+    overflow: hidden;
 }
 
 form button {

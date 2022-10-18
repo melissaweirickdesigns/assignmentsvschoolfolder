@@ -1,11 +1,4 @@
-// const { default: axios } = require("axios")
-
-// const { default: axios } = require("axios")
-
-           
-
-
-// Get All
+// / GET REQUEST
 
 function getData() {
     axios.get("https://api.vschool.io/mollymoosebinx/todo")
@@ -26,34 +19,55 @@ function getData() {
                 const imgUrl = document.createElement('h5')
                 imgUrl.textContent = response.data[i].imgUrl
                 document.body.appendChild(imgUrl)
+                const completedValue = document.createElement('h5')
+                completedValue.textContent = `Completed: ${response.data[i].completed}`
+                document.body.appendChild(completedValue)
+                const completedActionTrue = {
+                    completed: true
+                }
                 const completeButton = document.createElement('input')
+                completeButton.setAttribute("id", `completeButton${response.data[i]._id}`)
                 completeButton.type = "checkbox"
-                completeButton.addEventListener("change", completeRequest)
+                //PUT REQUEST
+                const completeRequest = function(id) {
+                    if (`completeButton${response.data[i]._id}.checked`) {
+                        console.log(response.data[i].completed)
+                        console.log(id)
+                        axios.put(`https://api.vschool.io/mollymoosebinx/todo/${id}`,completedActionTrue)
+                            .then(response => {
+                                console.log(response.data)
+                                getData()
+                                window.location.reload()  
+                            })
+                            .catch(error => console.log(error.data))
+                      } else {
+                        console.log("Checkbox is not checked..");
+                      }
+                    }
+                completeButton.addEventListener("change", () => completeRequest(response.data[i]._id))
                 document.body.appendChild(completeButton)
                 const deleteButton = document.createElement('button')
                 deleteButton.textContent = "DELETE"
-                deleteButton.addEventListener("click" , deleteRequest)
+                deleteButton.setAttribute = ("id", `deleteButton${response.data[i]._id}`)
+                const deleteRequest = function(id) {
+                    //DELETE REQUEST
+                    axios.delete(`https://api.vschool.io/mollymoosebinx/todo/${id}`)
+                        .then(response => {
+                            getData()
+                            window.location.reload()
+                        })
+                        .catch(error => console.log(error.data))
+                }
+                deleteButton.addEventListener("click", ()=> deleteRequest(response.data[i]._id))
                 document.body.appendChild(deleteButton)
             }
         })
         .catch(error => console.log(error.data))
-    }
+}
 
     getData()
 
-// // Get One
-
-//     axios.get("https://api.vschool.io/mollymoosebinx/todo/1")
-//         .then(response => {
-//             for(let i = 0; i < response.data.length; i++) {
-//                 const h1 = document.createElement('h1');
-//                 h1.textContent = response.data[i].title;
-//                 document.body.appendChild(h1);
-//             }
-//         })
-//         .catch(error => console.log(error.data))
-
-//POST
+//POST REQUEST
 
 const toDoform = document.toDoform;
 
@@ -74,29 +88,13 @@ toDoform.addEventListener("submit", function(e){
     axios.post("https://api.vschool.io/mollymoosebinx/todo", newTodo)
         .then(response => {
             getData()
+            window.location.reload()
         })
         .catch(error => console.log(error.data.title))
 });
 
-const deleteRequest = function() {
-    axios.delete('https://api.vschool.io/mollymoosebinx/todo/${id}')
-        .then(response => getData())
-        .catch(error => console.log(error.data))
-}
 
-const completeRequest = function() {
-    if (this.checked) {
-        axios.put('https://api.vschool.io/mollymoosebinx/todo/${id}', {completed})
-            .then(response => {
-                "completed"; true
-             title.textContent = strike()
-             getData()
-        })
-        .catch(error => console.log(error.data))
-      } else {
-        console.log("Checkbox is not checked..");
-      }
-    
-}
 
-    
+
+
+
