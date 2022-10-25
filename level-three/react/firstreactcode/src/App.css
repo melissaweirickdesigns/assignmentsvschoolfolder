@@ -3,8 +3,9 @@
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
+  max-height: 100px;
+  max-width: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +27,25 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.nav-bar {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid grey;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu {
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 @keyframes App-logo-spin {
