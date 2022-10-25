@@ -1,0 +1,27 @@
+<!-- 1. Why do we need to `import React from "react"` in our files?
+
+to access react components. Without it, our js file will not recognize react and wont work properly
+
+2. If I were to console.log(page) in index.js, what would show up?
+
+javascript object
+
+3. What's wrong with this code:
+```
+const page = (
+    <h1>Hello</h1>
+    <p>This is my website!</p>
+)
+```
+
+You need to add a div as  you can only have one component in a variable for react components
+
+
+4. What does it mean for something to be "declarative" instead of "imperative"?
+
+walk me through it step by step vs I assume you know how to make a sandwhich
+
+
+5. What does it mean for something to be "composable"? -->
+
+<!-- multiple pieces put together to build a masterpiece -->
