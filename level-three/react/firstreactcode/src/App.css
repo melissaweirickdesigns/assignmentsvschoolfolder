@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   pointer-events: none;
   max-height: 100px;
@@ -14,27 +10,19 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .nav-bar {
   display: flex;
   height: 100px;
-  justify-content: space-between;
   align-items: center;
   border-bottom: solid grey;
+  background-color: #21222a;
+  color:#61dafb;
+}
+
+.nav-title {
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 30px;
 }
 
 .nav-items {
@@ -42,10 +30,46 @@
   display: flex;
 }
 
+.nav-menu, .main-section, .footer-section {
+  color: white;
+}
+
 .nav-menu {
   padding: 20px;
   font-size: 20px;
-  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.main-section {
+  background-image: url(../public/logo192.png);
+  background-repeat: no-repeat;
+  background-position-x: 112%;
+  background-position-y: 50%;
+}
+
+.main-section, .footer-section {
+  padding: 57px 27px;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.main-list {
+  margin-top: 46px;
+  max-width: 400px;
+}
+
+.main-list-items {
+  line-height: 19px;
+  padding-block: 10px;
+}
+
+li::marker {
+  font-size: 1.4rem;
+  color:#61dafb;
 }
 
 @keyframes App-logo-spin {

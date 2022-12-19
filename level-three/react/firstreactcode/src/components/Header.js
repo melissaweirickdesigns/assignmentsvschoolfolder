@@ -5,6 +5,7 @@ export default function Header() {
       <header>
         <nav className="nav-bar">
           <img src={logo} className="App-logo" alt="logo" />
+          <h3 className="nav-title">REACT APP</h3>
           <ul className="nav-items">
             <li className="nav-menu">Pricing</li>
             <li className="nav-menu">About</li>
