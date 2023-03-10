@@ -8,14 +8,16 @@ import './App.css';
 
 export default function App() {
   const cardElements = CardData.map(cdata => {
-    return <CardComponent 
-      profilePicture={cdata.profilePicture}
-      reviewRating={cdata.reviewRating}
-      numberOfReviews={cdata.numberOfReviews}
-      country={cdata.country}
-      descrip={cdata.descrip}
-      pricePerPerson={cdata.pricePerPerson}
-    />
+    return 
+      <CardComponent 
+        key={cdata.id}
+        profilePicture={cdata.profilePicture}
+        reviewRating={cdata.reviewRating}
+        numberOfReviews={cdata.numberOfReviews}
+        country={cdata.country}
+        descrip={cdata.descrip}
+        pricePerPerson={cdata.pricePerPerson}
+      />
   })
   return (
     <div className="container">
