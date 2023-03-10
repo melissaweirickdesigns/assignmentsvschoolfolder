@@ -70,15 +70,18 @@
 
 .card--container {
   display: flex;
+  justify-content: center;
   width: 100%;
+  align-items: center;
 }
 
 .card-container-2 {  
-  width: 100%;
+  max-width: 200px;
+  align-items: center;
 }
 
 .card {
-  width: 100%;
+  width: 200px;
   height: 400px;
   font-size: 12px;
   font-style: normal;
@@ -86,6 +89,7 @@
   font-size: 12px;
   line-height: 110%;
   padding: 0 0 0 36px;
+  
 }
 
 .card--image {
