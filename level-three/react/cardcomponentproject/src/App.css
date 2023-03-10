@@ -73,7 +73,7 @@
   width: 100%;
 }
 
-.card-container-2 {
+.card-container-2 {  
   width: 100%;
 }
 
@@ -86,14 +86,12 @@
   font-size: 12px;
   line-height: 110%;
   padding: 0 0 0 36px;
-  background-color: #FF5A5F;
 }
 
-.card-image {
-  height: 200px;
-  max-width: 150px;
-  border-radius: 9px;
-
+.card--image {
+  width: 176px;
+  height: 235px;
+  margin: 0;
 }
 
 .card-stats {
