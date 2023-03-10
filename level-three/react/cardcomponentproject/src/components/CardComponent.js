@@ -13,7 +13,7 @@ export default function CardComponent(props) {
                     <span className="country margin side-margin">{props.country}</span>
                 </div>
                 <p className="description margin">{props.descrip}</p>
-                <p className="price margin"><span className="bold">From <span className="price-amount">{props.pricePerPerson}</span></span> / person</p>
+                <p className="price margin"><span className="bold">From $<span className="price-amount">{props.pricePerPerson}</span></span> / person</p>
             </div>
         </div>
     )
