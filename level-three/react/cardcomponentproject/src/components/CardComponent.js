@@ -2,9 +2,18 @@ import React from "react";
 import starRating from "../photos/star-rating.png"
 
 export default function CardComponent(props) {
+    let badgeText
+    if (props.openSpots === 0) {
+        // or as an example of the alternative prop.item.openSpots
+        badgeText = "SOLD OUT"
+    } else if (props.country === "Online") {
+        badgeText = "ONLINE"
+    }
+
     return (
        <div className="card-container-2"> 
             <div className="card">
+                {badgeText && <div className="card--badge">{badgeText}</div>}
                 <img src={props.profilePicture} alt="profile photo" className="card--image"/>
                 <div className="card--stats">
                     <img src={starRating} alt="star rating photo" className="card--star margin side-margin"/>

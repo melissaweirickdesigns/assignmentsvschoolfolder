@@ -1,0 +1,94 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  left: 0px;
+  top: 0px;
+  background: #F55A5A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  gap: .2em;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.4608px;
+  line-height: 18px;
+  letter-spacing: -0.075em;
+}
+
+.container {
+  margin: 40px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  top: 60px;
+}
+
+.container--two {
+  width: 100%;
+  height: 168px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 20px;
+  border-bottom: 1px solid #F5F5F5;
+  min-width: 746px;
+}
+
+.card--imgageURL {
+  position: relative;
+  height: auto;
+  max-height: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  border-radius: 5px;
+}
+
+.card-summaryinfo {
+  position: relative;
+  margin: 19px;
+}
+
+.card--locinfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.card--locationicon {
+  color:#f71616;
+}
+
+.card--googleMapsUrl {
+  margin-left: 12px;
+  text-decoration: underline;
+  color: #504f4f5e;
+}
+
+.card--title {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 4px 0;
+}
+
+.card-dateinfo {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 7px 0;
+}
+
+.card-description {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 9px 0;  
+}
+

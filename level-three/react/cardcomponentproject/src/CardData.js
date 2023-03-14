@@ -4,85 +4,94 @@ import mountainBike from "./photos/mountain-bike-1.png"
 
 export default [
     {
-        id: 1
+        id: 1,
         profilePicture: profilePhoto,
         reviewRating: 5.0,
         numberOfReviews: 6,
         country: "USA",
         descrip: "Life lessons with Katie Zaferes",
-        pricePerPerson: 136
+        pricePerPerson: 136,
+        openSpots: 0
     },
     {
-        id: 2
+        id: 2,
         profilePicture: weddingPhotogrphy,
         reviewRating: 5.0,
         numberOfReviews: 30,
-        country: "USA",
+        country: "Online",
         descrip: "Learn Wedding Photography",
-        pricePerPerson: 125
+        pricePerPerson: 125,
+        openSpots: 27
     },
     {
-        id: 3
+        id: 3,
         profilePicture: mountainBike,
         reviewRating: 4.8,
         numberOfReviews: 2,
         country: "USA",
         descrip: "Group Mountain Biking",
         pricePerPerson: 50,
+        openSpots: 3
     },
     {
-        id: 4
+        id: 4,
         profilePicture: profilePhoto,
         reviewRating: 5.0,
         numberOfReviews: 6,
         country: "USA",
         descrip: "Life lessons with Katie Zaferes",
-        pricePerPerson: 136
+        pricePerPerson: 136,
+        openSpots: 0
     },
     {
-        id: 5
+        id: 5,
         profilePicture: weddingPhotogrphy,
         reviewRating: 5.0,
         numberOfReviews: 30,
         country: "USA",
         descrip: "Learn Wedding Photography",
-        pricePerPerson: 125
+        pricePerPerson: 125,
+        openSpots: 0
     },
     {
-        id: 6
+        id: 6,
         profilePicture: mountainBike,
         reviewRating: 4.8,
         numberOfReviews: 2,
         country: "USA",
         descrip: "Group Mountain Biking",
         pricePerPerson: 50,
+        openSpots: 0
     },
     {
-        id: 7
+        id: 7,
         profilePicture: profilePhoto,
         reviewRating: 5.0,
         numberOfReviews: 6,
         country: "USA",
         descrip: "Life lessons with Katie Zaferes",
-        pricePerPerson: 136
+        pricePerPerson: 136,
+        openSpots: 0
     },
     {
-        id: 8
+        id: 8,
         profilePicture: weddingPhotogrphy,
         reviewRating: 5.0,
         numberOfReviews: 30,
         country: "USA",
         descrip: "Learn Wedding Photography",
-        pricePerPerson: 125
+        pricePerPerson: 125,
+        openSpots: 0
     },
     {
-        id: 9
+        id: 9,
         profilePicture: mountainBike,
         reviewRating: 4.8,
         numberOfReviews: 2,
         country: "USA",
         descrip: "Group Mountain Biking",
         pricePerPerson: 50,
+        openSpots: 3
     }
 ]
 
