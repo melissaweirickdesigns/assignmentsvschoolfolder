@@ -58,6 +58,7 @@
 .card--locinfo {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .card--locationicon {
@@ -91,4 +92,23 @@
   height: auto;
   margin: 9px 0;  
 }
+
+@media screen and (max-width: 745px) {
+  .card {
+    flex-direction: column;
+  }
+  .container--two {
+    height: auto;
+  }
+  .container {
+    gap: 1em;
+  }
+  .card-summaryinfo {
+    margin: 19px 0;
+  }
+  .card-description {
+    max-width: 250px;
+  }
+}
+
 
