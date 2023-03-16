@@ -6,7 +6,7 @@ export default [
         googleMapsUrl: "https://goo.gl/maps/iQuPqTiy9yUYRf8g9",
         startDate: "4 December, 2022",
         endDate: "14 December, 2022",
-        description: "One of the most peaceful and beautiful places to have a relaxation",
+        description: "One of the most peaceful and beautiful places to have a relaxation vacation",
         imageUrl: "https://traveloregon.com/wp-content/uploads/2018/03/2018BandonYS_Circles.jpg"
     },
     {
