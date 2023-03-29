@@ -1,0 +1,42 @@
+.main-div {
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+.friend-list-div {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.friend-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: .2em rgba(0, 0, 0, 0.048) solid;
+}
+
+.friend-Profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20%;
+    border: .1em rgba(128, 128, 128, 0.164) solid;
+    background-color: aliceblue;
+}
+
+.friend-name {
+    font-size: 20px;
+}
+
+.friend-age {
+    font-size: 15px;
+}
+
+.friend-pets {
+    display: flex;
+    justify-content: space-around;
+}
