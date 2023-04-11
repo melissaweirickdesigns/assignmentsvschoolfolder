@@ -1,0 +1,17 @@
+.new-color {
+  background-color: pink;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.answerParagraph {
+  margin: 25px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}

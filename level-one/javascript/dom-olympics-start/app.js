@@ -24,6 +24,7 @@ clearAllMessages.addEventListener("click", clearMessages);
 
 function clearMessages(){
     document.getElementById("messages").innerHTML = "";
+    toggleDiv = "right";
 };
 
 const message = document.getElementsByClassName("message");
