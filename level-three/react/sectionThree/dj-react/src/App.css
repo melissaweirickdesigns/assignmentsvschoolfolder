@@ -9,13 +9,14 @@
 .lightBoxStyle {
     width: 100%;
     height: 200px;
-    border: .5em black solid;
+    border: .1em black solid;
 }
 
 .buttons-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
+    padding: 20px;
 }
 
 .buttons-style {

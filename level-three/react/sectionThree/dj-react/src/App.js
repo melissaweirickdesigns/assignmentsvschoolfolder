@@ -6,7 +6,7 @@ import sound3 from "./assets/button3audio.mp3";
 
 export default function App() {
 
-  const [squareColors, setSquareColors] = useState(["white", "white", "white", "white"]);
+  const [squareColors, setSquareColors] = useState(["black", "black", "black", "black"]);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [timerId, setTimerID] = useState(null);
   const audio3 = new Audio(sound3);
@@ -56,7 +56,7 @@ export default function App() {
       } else if (id === 5) {
         setSquareColors((prevColors) => {
           const newColors = [...prevColors];
-          newColors[0] = newColors[0] === "white" ? {prevColors} : "orange";
+          newColors[0] = "orange";
           if (timerId !== null) {
             clearTimeout(timerId);
           }
@@ -69,7 +69,7 @@ export default function App() {
       } else if (id === 6) {
         setSquareColors((prevColors) => {
           const newColors = [...prevColors];
-          newColors[1] = newColors[1] === "white" ? {prevColors} : "orange";
+          newColors[1] = "orange";
           setTimeout(() => {
             setSquareColors(prevColors);
           }, 500);
@@ -78,7 +78,7 @@ export default function App() {
       } else if (id === 7) {
         setSquareColors((prevColors) => {
           const newColors = [...prevColors];
-          newColors[2] = newColors[2] === "white" ? {prevColors} : "orange";
+          newColors[2] = "orange";
           setTimeout(() => {
             setSquareColors(prevColors);
           }, 500);
@@ -87,7 +87,7 @@ export default function App() {
       } else if (id === 8) {
         setSquareColors((prevColors) => {
           const newColors = [...prevColors];
-          newColors[3] = newColors[3] === "white" ? {prevColors} : "orange";
+          newColors[3] = "orange";
           setTimeout(() => {
             setSquareColors(prevColors);
           }, 500);
