@@ -11,7 +11,6 @@ export default function Square({backgroundColor}) {
             className="lightBoxStyle"
             style={lightBoxBGStyle}
         >
-            test
         </div>
     )
 }

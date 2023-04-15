@@ -1,8 +1,7 @@
-import { useState } from "react";
 import Button from "./Button";
 
 export default function Buttons({onClick}) {
-    const [buttonLevels, setButtonLevels] = useState([
+    const buttonLevels= [
         { id: 1, names: "Small time DJ"},
         { id: 2, names: "Party DJ"},
         { id: 3, names: "Professional DJ Left"},
@@ -10,11 +9,11 @@ export default function Buttons({onClick}) {
         { id: 5, names: "Big Time DJ 1"},
         { id: 6, names: "Big Time DJ 2"},
         { id: 7, names: "Big Time DJ 3"},
-        { id: 8, names: "Big Time DJ 4"},
-    ])
+        { id: 8, names: "Big Time DJ 4"}
+    ]
 
     return (
-        <div>
+        <div className="buttons-container">
             {buttonLevels.map(({id, names}) => (
                 <Button 
                     key={id}
