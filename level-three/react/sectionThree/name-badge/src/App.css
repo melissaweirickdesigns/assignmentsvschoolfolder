@@ -1,0 +1,104 @@
+.app {
+  gap: .5em;
+}
+.form-data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  "fname lname"
+  "email birthPlace"
+  "phone food"
+  "description description"
+  "submit submit"  ;
+  padding: 50px;
+  gap: .5em;
+  border: .2em rgba(0, 0, 0, 0.144) solid;
+  margin: 20px;
+}
+
+.fname {
+  grid-area: fname;
+}
+
+.lname {
+  grid-area: lname;
+}
+
+.email {
+  grid-area: email;
+}
+
+.birthPlace {
+  grid-area: birthPlace;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.food {
+  grid-area: food;
+}
+
+.description {
+  grid-area: description;
+  height: 100px;
+}
+
+.submit {
+  grid-area: submit;
+  width: 100px;
+  position: relative;
+  left: 44%;
+}
+
+.name-badge-div {
+  border: .2em rgba(0, 0, 0, 0.144) solid;
+  margin: 20px;
+}
+
+.badgeTitle {
+  background-color: rgb(87, 86, 86);
+  border-radius: .3em;
+  color: white;
+  padding-left: 10px;
+}
+
+.name-badge {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  "fullName phoneNumber"
+  "placeOfBirth favFood"
+  "emailAddress emailAddress"
+  "enteredDescrip enteredDescrip";
+  gap: .5em;
+  margin: 50px;  
+}
+
+.fullName {
+  grid-area: fullName;
+}
+
+.phoneNumber {
+  grid-area: phoneNumber;
+}
+
+.placeOfBirth {
+  grid-area: placeOfBirth;
+}
+
+.favFood {
+  grid-area: favFood;
+}
+
+.emailAddress {
+  grid-area: emailAddress;
+}
+
+.enteredDescrip {
+  grid-area: enteredDescrip;
+  width: 100%;
+  border: .2em rgba(0, 0, 0, 0.144) solid;
+  height: 100px;
+}
