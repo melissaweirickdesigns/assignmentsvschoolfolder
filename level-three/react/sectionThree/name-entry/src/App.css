@@ -1,0 +1,33 @@
+.appDiv {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 1em;
+  grid-template-areas: 
+  "nameChangeForm contactInfo"
+  "nameList nameList";
+}
+
+.nameChangeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  grid-area: nameChangeForm;
+}
+
+.nameList {
+  grid-area: nameList;
+}
+
+.nameListDiv {
+  display: flex;
+  flex-direction: row;
+  gap: .3em;
+  list-style-type: decimal;
+}
+
+.contactInfo {
+  grid-area: contactInfo;
+}
+
