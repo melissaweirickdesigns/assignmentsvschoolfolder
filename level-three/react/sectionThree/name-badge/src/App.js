@@ -10,14 +10,12 @@ export default function App() {
     setNameBadges([...nameBadges, data]);
   }
 
-  const addNameBadge = (formData) => {
-    setNameBadges([...nameBadges, formData]);
-  }
-
   return (
     <div className="App">
-      <FormData onSubmit={handleFormSubmit} addNameBadge={addNameBadge}/>
-      {nameBadges.map((formData, index) => <NameBadge formData={formData} key={formData.email} index={index}/>)}
+      <FormData onSubmit={handleFormSubmit} />
+      {nameBadges.map((formData, index) => 
+        <NameBadge formData={formData} key={formData.email} index={index}/>)
+      }
     </div>
   );
 }

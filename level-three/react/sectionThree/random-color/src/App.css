@@ -1,0 +1,13 @@
+
+.app {
+  justify-content: center;
+  text-align: center;
+}
+.color-container {
+  margin: 50px;
+}
+
+.random-color {
+  width: 100%;
+  height: 200px;
+}

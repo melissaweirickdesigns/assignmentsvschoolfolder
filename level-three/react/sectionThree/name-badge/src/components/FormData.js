@@ -47,13 +47,23 @@ export default function FormData(props) {
           [name]: value,
         }));
       };
+
+      const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          e.stopPropagation();
+          document.querySelector("form").dispatchEvent(
+            new Event("submit", { bubbles: true, cancelable: true })
+          );
+        }
+      };
       
 
       const isFormEmpty = Object.values(formData).some(val => !val);
      
       return (
             <div >
-              <form onSubmit={handleSubmit} className="form-data">
+              <form onSubmit={handleSubmit} className="form-data" onKeyDown={handleKeyDown}>
                 <input 
                   type="text" 
                   name="fname"
