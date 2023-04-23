@@ -111,7 +111,7 @@ input {
 .preview-header {
     margin: 0px 25px;
     width: 100%;
-    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    background-color: #147a99;
     height: 20px;
     text-align: center;
     color: #FFFFFF;
