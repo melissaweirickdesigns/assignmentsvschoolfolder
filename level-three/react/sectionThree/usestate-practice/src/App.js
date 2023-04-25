@@ -6,7 +6,7 @@ import React from 'react';
 
 export default function App() {
   const [memeHistory, setMemeHistory] = React.useState([]);
-  const [currentMeme, setCurrentMeme] = React.useState(null);
+  const [setCurrentMeme] = React.useState(null);
 
   function addMemeToHistory(newMeme) {
     setMemeHistory(prevMemes => [...prevMemes, newMeme]);
