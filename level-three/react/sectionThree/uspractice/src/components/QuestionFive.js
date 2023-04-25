@@ -10,17 +10,16 @@ export default function QuestionFive() {
     ]);
 
     const addAge = () => {
-        const existingPerson = people.find (person => person.id === person.id);
-
-        setPeople(prevPeople => {
-            return prevPeople.map(person => {
-                if (person.id === existingPerson.id) {
-                    return {...person, age: 30}
-                }
-                return person;
-            })
-        })
-    };    
+        setPeople(prevPeople =>
+          prevPeople.map(person => {
+            if (person.id === person.id) {
+              return { ...person, age: 30 };
+            }
+            return person;
+          })
+        );
+      };
+      
 
     return (
         <div className='question-five'>

@@ -13,8 +13,6 @@ export default function QuestionFour() {
         // const [colors, setColors] = setState(["pink", "blue"])
         // setColors(prevColors => [...prevColors, "green"])
 
-        //By removing the curly braces and the return keyword, we can use the implicit return syntax. This is possible because the function only has one statement which returns the new state value.//
-
 //b.
     //from:
     // const [countObject, setCountObject] = setState({
@@ -36,7 +34,6 @@ export default function QuestionFour() {
     //     count: prevState.count + 1
     // }))
 
-    // By using parentheses around the object being returned, we can use the implicit return syntax and remove the return keyword.
     
 
   return (
