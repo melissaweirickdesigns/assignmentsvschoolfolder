@@ -1,9 +1,9 @@
-import AnglePercent from "./AnglePercent"
+import AnglePercent from "./AnglePercent";
 
 export default function LinearDirection(props) {
-    const {gradientDirection, handleGradientDirectionChange, gradientType, AnglePercent} = props
+    const {gradientDirection, handleGradientDirectionChange, gradientType, anglePercent, handleAnglePercentChange} = props
     return (
-        <div className='linear-direction'>
+        <div className='linear-direction '>
             <h4>Linear Direction</h4>
             <div className='gradient-input'>
                 <input 
@@ -43,7 +43,12 @@ export default function LinearDirection(props) {
                     />
                     <label htmlFor="angle">Custom Angle</label>
                     {gradientType === 'linear' && gradientDirection === 'angle' && (
-                        <AnglePercent gradientType={gradientType} gradientDirection={gradientDirection} />
+                        <AnglePercent
+                            gradientType={gradientType}
+                            gradientDirection={gradientDirection}
+                            anglePercent={anglePercent}
+                            handleAnglePercentChange={handleAnglePercentChange}
+                      />
                     )}
                 </div>
             </div>

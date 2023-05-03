@@ -19,7 +19,7 @@
 }
 
 .options-form {
-  max-height: 500px;
+  height: 250px;
   width: 500px;
   background-color: blueviolet;
   padding: 25px;
