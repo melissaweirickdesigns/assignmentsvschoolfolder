@@ -1,0 +1,47 @@
+.container {
+  margin: 25px;
+}
+
+.generator-main {
+  width: 75%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results-view,
+.options-form {
+  height: 200px;
+}
+
+.results-view {
+  width: 400px;
+}
+
+.options-form {
+  max-height: 500px;
+  width: 500px;
+  background-color: blueviolet;
+  padding: 25px;
+}
+
+.color-input,
+.gradient-input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.color-input {
+  justify-content: space-between;
+}
+
+.angle-label {
+  margin-right: 5px;
+}
+
+.css-code {
+  margin: 25px;
+}
