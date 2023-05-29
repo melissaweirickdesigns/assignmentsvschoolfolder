@@ -1,8 +1,6 @@
 const readline = require("readline-sync");
 
 //1. 
-let addedNum = 0;
-
 function sum(x, y){
     try { 
         if(typeof(x)!== "number")
