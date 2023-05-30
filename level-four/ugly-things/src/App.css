@@ -127,7 +127,7 @@ img {
   color: red;
 }
 
-.form-container{
+.form-container, .form-submitted {
   background-color: aquamarine;
   display: flex;
   justify-content: center;
@@ -154,17 +154,34 @@ input:hover {
 .img_gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   margin: 50px;
 }
 
 .photo-sq {
-  margin: 25px;
+  width: calc(33.33% - 50px);
+  margin-bottom: 25px;
   background-color: rgba(128, 128, 128, 0.116);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.edit-delete {
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-delete button{
+  margin: 10px 10px;
+  padding: 5px;
+  border-radius: .3em;
+}
+
+.edit-delete button:hover{
+  background-color: deepskyblue;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {

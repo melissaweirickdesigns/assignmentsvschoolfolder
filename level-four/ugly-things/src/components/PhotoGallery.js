@@ -3,14 +3,12 @@ import { ThemeContext } from '../ThemeContext';
 
 export default function PhotoGallery() {
   const { uglyThings, deleteUglyThing, editUglyThing } = useContext(ThemeContext);
-
-  // Track the edit mode and edited values for each photo
   const [editModes, setEditModes] = useState(uglyThings.map(() => false));
   const [editedTitles, setEditedTitles] = useState(uglyThings.map(() => ''));
   const [editedDescriptions, setEditedDescriptions] = useState(uglyThings.map(() => ''));
 
   const handleEdit = (index, uglyThing) => {
-    // Set the edit mode and populate the edited values for the specific photo
+    
     const updatedEditModes = [...editModes];
     const updatedEditedTitles = [...editedTitles];
     const updatedEditedDescriptions = [...editedDescriptions];
@@ -25,7 +23,7 @@ export default function PhotoGallery() {
   };
 
   const handleCancelEdit = (index) => {
-    // Cancel the edit mode and clear the edited values for the specific photo
+    
     const updatedEditModes = [...editModes];
     const updatedEditedTitles = [...editedTitles];
     const updatedEditedDescriptions = [...editedDescriptions];
@@ -40,10 +38,10 @@ export default function PhotoGallery() {
   };
 
   const handleSaveEdit = (index, uglyThing) => {
-    // Save the edited values for the specific photo
+    
     editUglyThing(uglyThing._id, editedTitles[index], editedDescriptions[index]);
 
-    // Reset the edit mode and clear the edited values for the specific photo
+    
     const updatedEditModes = [...editModes];
     const updatedEditedTitles = [...editedTitles];
     const updatedEditedDescriptions = [...editedDescriptions];
@@ -89,13 +87,16 @@ export default function PhotoGallery() {
             <>
               <h3>{uglyThing.title}</h3>
               <p>{uglyThing.description}</p>
-              <button onClick={() => handleEdit(index, uglyThing)}>Edit</button>
-              <button onClick={() => deleteUglyThing(uglyThing._id)}>Delete</button>
+              <div className='edit-delete'>
+                <button onClick={() => handleEdit(index, uglyThing)}>Edit</button>
+                <button onClick={() => deleteUglyThing(uglyThing._id)}>Delete</button>
+              </div>              
             </>
           )}
         </div>
       ))}
     </div>
   );
+  
 }
 
