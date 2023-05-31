@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../ThemeContext';
 
 export default function PhotoGallery() {
@@ -6,9 +6,45 @@ export default function PhotoGallery() {
   const [editModes, setEditModes] = useState(uglyThings.map(() => false));
   const [editedTitles, setEditedTitles] = useState(uglyThings.map(() => ''));
   const [editedDescriptions, setEditedDescriptions] = useState(uglyThings.map(() => ''));
+  const [comments, setComments] = useState({});
+  const [commentInputs, setCommentInputs] = useState(uglyThings.map(() => ''));
+
+  const updateLocalStorage = () => {
+    uglyThings.forEach((uglyThing) => {
+      localStorage.setItem(`comments_${uglyThing._id}`, JSON.stringify(comments[uglyThing._id] || []));
+    });
+  };
+
+  useEffect(() => {
+    const storedComments = {};
+    uglyThings.forEach((uglyThing) => {
+      const storedCommentsForUglyThing = JSON.parse(localStorage.getItem(`comments_${uglyThing._id}`));
+      if (storedCommentsForUglyThing) {
+        storedComments[uglyThing._id] = storedCommentsForUglyThing;
+      }
+    });
+    setComments(storedComments);
+  }, [uglyThings]);
+
+  useEffect(() => {
+    updateLocalStorage();
+  }, [comments, uglyThings]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      updateLocalStorage();
+      event.returnValue = '';
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   const handleEdit = (index, uglyThing) => {
-    
     const updatedEditModes = [...editModes];
     const updatedEditedTitles = [...editedTitles];
     const updatedEditedDescriptions = [...editedDescriptions];
@@ -23,7 +59,6 @@ export default function PhotoGallery() {
   };
 
   const handleCancelEdit = (index) => {
-    
     const updatedEditModes = [...editModes];
     const updatedEditedTitles = [...editedTitles];
     const updatedEditedDescriptions = [...editedDescriptions];
@@ -38,10 +73,8 @@ export default function PhotoGallery() {
   };
 
   const handleSaveEdit = (index, uglyThing) => {
-    
     editUglyThing(uglyThing._id, editedTitles[index], editedDescriptions[index]);
 
-    
     const updatedEditModes = [...editModes];
     const updatedEditedTitles = [...editedTitles];
     const updatedEditedDescriptions = [...editedDescriptions];
@@ -53,6 +86,28 @@ export default function PhotoGallery() {
     setEditModes(updatedEditModes);
     setEditedTitles(updatedEditedTitles);
     setEditedDescriptions(updatedEditedDescriptions);
+  };
+
+  const handleAddComment = (index, comment) => {
+    const uglyThing = uglyThings[index];
+    const uglyThingId = uglyThing._id;
+    const updatedComments = { ...comments };
+    if (!updatedComments[uglyThingId]) {
+      updatedComments[uglyThingId] = [];
+    }
+    updatedComments[uglyThingId] = [...updatedComments[uglyThingId], comment];
+    setComments(updatedComments);
+    const updatedCommentInputs = [...commentInputs];
+    updatedCommentInputs[index] = '';
+    setCommentInputs(updatedCommentInputs);
+    updateLocalStorage();
+  };
+
+  const handleDeleteComment = (uglyThingId, commentIndex) => {
+    const updatedComments = { ...comments };
+    updatedComments[uglyThingId] = comments[uglyThingId].filter((_, index) => index !== commentIndex);
+    setComments(updatedComments);
+    updateLocalStorage();
   };
 
   return (
@@ -90,13 +145,29 @@ export default function PhotoGallery() {
               <div className='edit-delete'>
                 <button onClick={() => handleEdit(index, uglyThing)}>Edit</button>
                 <button onClick={() => deleteUglyThing(uglyThing._id)}>Delete</button>
-              </div>              
+              </div>
+              <input
+                type='text'
+                value={commentInputs[index]}
+                onChange={(e) => {
+                  const updatedCommentInputs = [...commentInputs];
+                  updatedCommentInputs[index] = e.target.value;
+                  setCommentInputs(updatedCommentInputs);
+                }}
+                className='comment-input'
+              />
+              <button onClick={() => handleAddComment(index, commentInputs[index])}>Add Comment</button>
+              {comments[uglyThing._id] &&
+                comments[uglyThing._id].map((comment, commentIndex) => (
+                  <div key={commentIndex} className='comment-section'>
+                    <p>{comment}</p>
+                    <button onClick={() => handleDeleteComment(uglyThing._id, commentIndex)}>x</button>
+                  </div>
+                ))}
             </>
           )}
         </div>
       ))}
     </div>
   );
-  
 }
-

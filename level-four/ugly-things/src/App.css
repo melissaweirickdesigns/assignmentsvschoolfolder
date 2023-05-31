@@ -177,11 +177,26 @@ input:hover {
 .edit-delete button{
   margin: 10px 10px;
   padding: 5px;
-  border-radius: .3em;
+  border-radius: .3
+  em;
 }
 
 .edit-delete button:hover{
   background-color: deepskyblue;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.comment-section button{
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
