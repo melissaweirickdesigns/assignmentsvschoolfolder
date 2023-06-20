@@ -1,0 +1,225 @@
+img {
+  object-fit: contain;
+  object-position: center;
+  max-width: 50px;
+}
+
+.logo-section {
+  color: #fff;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.nav {
+  background-color: #333;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.nav a{
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.nav a:hover{
+  background-color: deepskyblue;
+  color: #000;
+  padding: 75px 16px;
+}
+
+.nav a.active{
+  border-bottom: 1px solid deepskyblue;
+  color: deepskyblue;
+}
+
+.nav a.active:hover{
+  background-color: deepskyblue;
+  color: #000;
+}
+
+.nav .icon{
+  display: none;
+}
+
+.home-page-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+}
+
+.welcome-section {
+  width: 30%;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.list-of-apps {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-evenly; 
+  margin-top: 50px;
+}
+
+.cal-task-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.calendar-preview-section {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.nextthreecalendarview {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+button {
+  margin: 3px;
+}
+
+.priority-preview-section {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.combined-priority {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.priority-levl-btns-section {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.priority-level-window {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.priority {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.notif-dept-section {
+  width: 30%;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+h3 {
+  margin: 10px;
+}
+
+.message-section {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.department-section-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content {
+  position: fixed;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #161616;
+  color: white;
+}
+
+
+.socials{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.socials a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a i{
+  font-size: 25px;
+  transition: color .4s ease;
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+
+input {
+  margin: 10px;
+  line-height: 20px;
+  border-radius: 5px;
+  border: .5 solid rgba(0, 0, 0, 0.137);
+}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(.icon) {
+    display: none;
+  }
+
+  .nav.responsive {
+    position: relative;
+  }
+
+  .nav.responsive .icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+  }
+
+  .nav.responsive .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    background-color: #333;
+    padding-top: 10px;
+  }
+
+  .nav.responsive .nav-links a {
+    margin: 10px;
+  }
+}
