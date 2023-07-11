@@ -1,26 +1,13 @@
 const express = require("express")
 const app = express()
+const { v4: uuidv4 } = require('uuid');
 
 app.use(express.json())
+uuidv4()
 
-const users = [
-    {name: "joe", age: "5"},
-    {name: "Moe", age: "6"},
-    {name: "Shmoe", age: "7"},
-    {name: "Jill", age: "8"},
-    {name: "Bill", age: "9"},
-]
-
-app.get("/users", (req, res) => {
-    res.send(users)
-})
-
-app.post("/users", (req, res) => {
-    const newUser = req.body
-    users.push(newUser)
-    res.send(`Successfully added ${newUser.name} as a user`)
-})
+app.use("/users", require("./routes/userRouter.js"))
+app.use("/newsletter", require("./routes/newsletterRouter.js"))
 
 app.listen(9000, () => {
-    console.log("Registration Submitted")
+    console.log("The Server is running on Port 9000")
 })
