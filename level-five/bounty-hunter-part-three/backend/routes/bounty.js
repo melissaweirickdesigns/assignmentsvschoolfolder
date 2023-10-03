@@ -11,7 +11,7 @@ bountyRouter.route("/")
         const newBounty = req.body
         newBounty._id = uuidv4()
         bounty.push(newBounty)
-        res.send("bounty added to list")
+        res.status(200).send("bounty added to list")
     })
 
 bountyRouter.put("/:bountyID", (req, res) => {
