@@ -14,7 +14,7 @@ app.use(cors({
 mongoose.set('strictQuery', true)
 mongoose.set('debug', true)
 
-mongoose.connect('mongodb+srv://mjdallas5:W8kgcVUGcnKcSw3H@cluster0.0foysi0.mongodb.net/bounty', (err) => {
+mongoose.connect('mongodb+srv://mjdallas5:****@cluster0.0foysi0.mongodb.net/bounty', (err) => {
   console.log("connected to database", err)
 })
 app.use("/bounty", require("./routes/bounty"))
