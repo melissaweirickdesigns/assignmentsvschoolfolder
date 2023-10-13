@@ -33,7 +33,7 @@ export default function BountyList({ bounties, onEdit, onDelete }) {
   const handleSaveClick = async () => {
     try {
       const response = await axios.put(`/bounty/${editableBounty._id}`, editableBounty);
-      if (response.status === 200) {
+      if (response.status === 201) {
         onEdit(response.data);
         setEditableBounty(null);
         this.forceUpdate();
@@ -45,11 +45,23 @@ export default function BountyList({ bounties, onEdit, onDelete }) {
     }
 }
 
+  const [searchTerm, setSearchTerm] = useState('');
+  
+  const filteredBounties = bounties.filter(bounty => 
+    bounty.type.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <h2>Bounty List</h2>
+      <input 
+        type="text" 
+        placeholder="Search by type..." 
+        value={searchTerm} 
+        onChange={e => setSearchTerm(e.target.value)} 
+      />
       <ul className="bounty-list">
-        {bounties.map((bounty) => (
+        {filteredBounties.map((bounty) => (
           <li key={bounty._id} className="bounty-item">
             {editableBounty && editableBounty._id === bounty._id ? (
               <>

@@ -6,7 +6,7 @@ function BountyForm({onBountyAdd}) {
         lName: '',
         living: true,
         bountyAmt: '',
-        type: 'sith'
+        type: ''
     });
     
     const handleChange = (e) => {
@@ -21,7 +21,7 @@ function BountyForm({onBountyAdd}) {
         e.preventDefault();
 
         try {
-            const response = await fetch('/bounty', {
+            const response = await fetch("/bounty", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ function BountyForm({onBountyAdd}) {
                 body: JSON.stringify(formData)
             });
 
-            if (response.status === 200) {
+            if (response.status === 201) {
                 alert('Bounty added successfully!');
                 onBountyAdd(formData);
                 setFormData({
@@ -37,7 +37,7 @@ function BountyForm({onBountyAdd}) {
                     lName: '',
                     living: true,
                     bountyAmt: '',
-                    type: 'sith'
+                    type: ''
                 });
             } else {
                 alert('Error adding bounty!');
