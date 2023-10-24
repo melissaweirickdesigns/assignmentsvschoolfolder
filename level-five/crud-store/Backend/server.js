@@ -1,6 +1,6 @@
 const express = require("express")
 const mongoose = require('mongoose')
-const mongoURI = "localhost:6000"
+const mongoURI = "***"
 const morgan = require('morgan')
 const cors = require('cors')
 const path = require('path');
