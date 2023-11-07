@@ -5,7 +5,7 @@ const Item = require('../models/itemSchema')
 storeRouter.route("/")
   .get(async (req, res, next) => {
     try {
-      const items = await Item.find().exec();
+      const items = await Item.find();
       return res.status(200).send(items);
     } catch (err) {
       console.error(err);

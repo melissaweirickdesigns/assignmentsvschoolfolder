@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     async function fetchItems() {
       try {
-        const response = await axios.get('/api/items'); // Assuming your Express API is running on the same host/port
+        const response = await axios.get('/api/items');
         setItems(response.data);
       } catch (error) {
         console.error('Error fetching items', error);

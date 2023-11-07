@@ -1,0 +1,182 @@
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input {
+  margin-left: 10px;
+}
+
+.main-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.button-container {
+  margin-top: 30px;
+}
+
+.dashboard-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.dashboard-button:hover {
+  background-color: #45a049;
+}
+
+.logout-button {
+  background-color: #f44336;
+}
+
+.logout-button:hover {
+  background-color: #da190b;
+}
+
+.admin-panel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.admin-panel-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.admin-panel-button:nth-child(1) { background-color: #4CAF50; } 
+.admin-panel-button:nth-child(2) { background-color: #2196F3; } 
+.admin-panel-button:nth-child(3) { background-color: #FFC107; } 
+.admin-panel-button:nth-child(4) { background-color: #FF5722; } 
+.admin-panel-button:nth-child(5) { background-color: #9C27B0; } 
+.admin-panel-button:nth-child(6) { background-color: #E91E63; } 
+.admin-panel-button:nth-child(7) { background-color: #32a852; } 
+.admin-panel-button:nth-child(8) { background-color: #e74c3c; } 
+
+
+.logout-button {
+  background-color: #d9534f; /* Red */
+}
+
+.logout-button:hover {
+  transform: scale(1.05);
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+.user-list-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-item button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-item button:hover {
+  background-color: #e7e7e7;
+}
+
