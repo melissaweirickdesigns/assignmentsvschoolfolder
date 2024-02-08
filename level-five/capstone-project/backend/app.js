@@ -14,7 +14,7 @@ app.use(cors({
 mongoose.set('strictQuery', true)
 mongoose.set('debug', true)
 
-mongoose.connect('mongodb+srv://mjdallas5:***@cluster0.0foysi0.mongodb.net/login')
+mongoose.connect('mongodb+srv://mjdallas5:****@cluster0.0foysi0.mongodb.net/login')
     .then(() => console.log("Connected to database"))
     .catch(err => console.error("Could not connect to database", err));
 
@@ -24,7 +24,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/index.html'));
   });
 app.get('/health-check', (req, res) => {
-    res.send('Server is healthy!');
+    res.send('Server is healthy!'); 
 });
 
 app.listen(PORT, () => {
