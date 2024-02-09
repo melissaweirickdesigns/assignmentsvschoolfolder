@@ -27,7 +27,7 @@ function Login() {
         });
         
         if (success) {
-            navigate('/currentissues');
+            navigate('/currentsops');
         }
         // No need to set error here, as errMsg from context will be used
     };
@@ -50,7 +50,7 @@ function Login() {
                     </div>
                     <button type="submit" className='login-button'>Login</button>
                 </form>
-<p className='signup-button'>
+                <p className='signup-button'>
                     Don't have an account? <button type="button" onClick={() => navigate('/signup')}>Sign Up</button>
                 </p>
             </div>

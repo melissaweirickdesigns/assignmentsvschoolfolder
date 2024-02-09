@@ -15,7 +15,11 @@ authRouter.post("/signup", async (req, res) => {
                 
         const newUser = new User({ 
             username: username, 
-            password: password
+            password: password,
+            fName: req.body.fName,
+            lName: req.body.lName,
+            phoneNumber: req.body.phoneNumber,
+            wEmail: req.body.wEmail
         });
         
         const savedUser = await newUser.save();

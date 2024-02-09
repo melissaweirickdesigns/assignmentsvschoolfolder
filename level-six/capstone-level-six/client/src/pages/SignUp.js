@@ -59,7 +59,7 @@ function SignUp() {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="wEmail">Work Email</label>
-                        <input type="email" id="wEmail" name="wEmail" required />
+                        <input type="text" id="wEmail" name="wEmail" required />
                     </div>
                     <button type="submit" className='signup-button'>Sign Up</button>
                 </form>

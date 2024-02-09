@@ -22,10 +22,11 @@ function NavigationDropdown() {
                 }
             }}>
                 <option value="">Navigate to...</option>
-                <option value="/currentissues">Current Issues</option>
-                {/* <option value="/addnewissue">Add New Issue</option> */}
-                {/* <option value="/myposts">My Posts</option> */}
-                {/* <option value="logout">Logout</option> */}
+                <option value="/currentsops">Current Sops</option>
+                <option value="/allsops">All Sops</option>
+                <option value="/addnewsop">Add New Sops</option>
+                <option value="/myposts">My Posts</option>
+                <option value="logout">Logout</option>
             </select>
         </div>
     );

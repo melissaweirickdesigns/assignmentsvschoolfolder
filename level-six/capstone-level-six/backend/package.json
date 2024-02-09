@@ -1,32 +1,25 @@
 {
-  "name": "symphonynaturalhealthhd",
+  "name": "snhhelpdesk",
   "version": "1.0.0",
-  "description": "An internal database that will provide organizational support for Symphony Natural Health",
+  "description": "RTV Assignment Level Six",
   "main": "server.js",
   "scripts": {
-    "test": "test 101",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [
-    "Symphony",
-    "Natural",
-    "Health",
-    "Help",
-    "Desk",
-    "Database"
-  ],
+  "keywords": [],
   "author": "Melissa Weirick",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.1",
-    "express": "^4.18.2",
-    "express-jwt": "^8.4.1",
-    "express-path": "^0.3.8",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.1.1",
-    "morgan": "^1.10.0",
-    "path": "^0.12.7",
+    "argon2": "^0.31.2",
     "bcrypt": "^5.1.1",
-    "cors": "^2.8.5"
-  }
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.1",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.3.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {}
 }
